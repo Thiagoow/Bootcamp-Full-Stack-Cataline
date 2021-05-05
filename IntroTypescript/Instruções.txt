@@ -1,0 +1,31 @@
+Instalamos o typescript e o compilador do Ts com o comando:
+    npm i typescript ts-node-dev -D
+
+Criamos a pasta src com nosso arquivo main.ts;
+
+Utilizando a CLI "tsc" no node_modules/bin:
+    npx tsc --init
+Criamos o tsconfig.json, e descomentamos oq fomos usar, 
+nesse caso, o "rootDir";
+
+Agora criando o compilador:
+Descomentamos também o "outDir",no tsconfig.json e definimos ambos como:
+    "outDir": "./dist"
+    "rootDir": "./src" 
+Rodando em seguida, o comando "npx tsc" no terminal, para criar o compilador.
+
+Trocamos o "test:" do package.json pra:
+    "build": "tsc",
+    "dev": ""dev": "ts-node-dev --respawn --quiet --respawn ./src/main.ts""
+
+E rodamos o comando:
+    npm run build
+
+Testando e executando pra ver se deu certo, rodamos nosso compilador js, da pasta build, com o comando:
+    node ./dist/main.js
+
+Dps que deu certo, executamos o:
+    npm run dev
+
+Utilizando e alterando para desenvolver nossos projetos, SEMPRE o main.ts na "src". Já que o main.js da "build",
+serve apenas como compilador do nosso .ts 😉
