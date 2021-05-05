@@ -1,0 +1,2 @@
+Pra executar os exemplos da aula:
+Copie o código do arquivo, e cole no main.ts na raiz da pasta "src".

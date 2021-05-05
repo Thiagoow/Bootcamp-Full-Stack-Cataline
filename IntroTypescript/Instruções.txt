@@ -16,7 +16,7 @@ Rodando em seguida, o comando "npx tsc" no terminal, para criar o compilador.
 
 Trocamos o "test:" do package.json pra:
     "build": "tsc",
-    "dev": ""dev": "ts-node-dev --respawn --quiet --respawn ./src/main.ts""
+    "dev": ""dev": "ts-node-dev --respawn --quiet ./src/main.ts""
 
 E rodamos o comando:
     npm run build
