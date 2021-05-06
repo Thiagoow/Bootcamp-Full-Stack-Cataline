@@ -50,7 +50,7 @@ Se o require der erro, instalamos o "npm i @types/node -D" (sem aspas)
 porque ele não vai estar instalado.
 
 --------------------AGORA, SE MESMO ASSIM DER ERRO:--------------
-MDS ASSUAHSA, TU QUER MESMO USAR ESSE BIBLIOTECA HEIN?)
+            MDS, TU QUER MESMO USAR ESSE BIBLIOTECA HEIN? 😅)
 
 Criamos um arquivo "global.d.ts" na pasta "src", tendo esse arquivo, o seguinte conteúdo:
     declare module "nomeBiblioteca"
