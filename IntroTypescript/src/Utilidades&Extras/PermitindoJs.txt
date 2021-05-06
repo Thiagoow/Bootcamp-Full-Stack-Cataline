@@ -1,0 +1,2 @@
+Vamos lá no tsconfig.json, e descomentamos o item: "allowJs";
+Conferindo também, se ele está como "true".
