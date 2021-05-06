@@ -26,7 +26,7 @@ Ts (apenas mudando sua extensão (.js pra .ts)), mas também
 declarando todas as variáveis. Para evitar esses erros.
 */
 
-//Usado no ./controllers:
+//--------------------Usado no ./controllers:--------------------
 import users from "@/controllers/http/Users";
 
 users();
@@ -42,3 +42,14 @@ o primeiro e segundo comando:
 E ele vai funcionar 😊😎, exibindo a função users(), no
 console.log.
 */
+
+//------Utilizado no ./Utilidades&Extras/Decorators.txt-----------
+//Importamos nosso decorator:
+import { setApiVersion } from "@/Utilidades&Extras/Decorators";
+
+//Para usar o decorador (não precisamos colocar ";"):
+@setApiVersion("A versão da api é: 1.0 🤩😎")
+class API {}
+
+//Mostra no console.log uma nova classe API:
+console.log(new API());
