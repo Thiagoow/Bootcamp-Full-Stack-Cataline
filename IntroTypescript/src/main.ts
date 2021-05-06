@@ -22,6 +22,6 @@ console.log(sum("5", "5"));
 /*
 Para impedir isso, não tem jeito, ou declaramos as
 vars no próprio arquivo Js, ou transformamos ele pra
-Ts, declarando todas as variáveis também. Para evitar
-esses erros.
+Ts (apenas mudando sua extensão (.js pra .ts)), mas também
+declarando todas as variáveis. Para evitar esses erros.
 */
