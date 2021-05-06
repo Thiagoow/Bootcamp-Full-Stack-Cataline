@@ -16,8 +16,10 @@ do tipo "any". Por causa da tipagem dinâmica.
 
 Oq significa que, se colocarmos os números com ""
 (duas strings), a função irá CONCATENÁ-LOS,
-invés de realmente somar.
-
+invés de realmente somar. Veja:
+*/
+console.log(sum("5", "5"));
+/*
 Para impedir isso, não tem jeito, ou declaramos as
 vars no próprio arquivo Js, ou transformamos ele pra
 Ts, declarando todas as variáveis também. Para evitar
