@@ -1,0 +1,4 @@
+Os arquivos:
+
+"axios.ts" e "calculator.ts", foram utilizados
+no ../Utilidades&Extras/PathMapping.ts

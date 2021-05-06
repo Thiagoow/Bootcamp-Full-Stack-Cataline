@@ -25,3 +25,20 @@ vars no próprio arquivo Js, ou transformamos ele pra
 Ts (apenas mudando sua extensão (.js pra .ts)), mas também
 declarando todas as variáveis. Para evitar esses erros.
 */
+
+//Usado no ./controllers:
+import users from "@/controllers/http/Users";
+
+users();
+/*
+Se der erro, é por que o Ts não está sendo usado
+como ambiente de dev, lá no package.json. Nesse caso:
+    npm i tsconfig-paths -D
+
+E adicionando também, no "dev" do package.json, entre
+o primeiro e segundo comando:
+    -r tsconfig-paths/register
+
+E ele vai funcionar 😊😎, exibindo a função users(), no
+console.log.
+*/

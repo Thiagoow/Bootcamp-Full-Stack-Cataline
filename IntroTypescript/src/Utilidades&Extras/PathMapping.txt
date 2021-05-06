@@ -1,0 +1,19 @@
+Ao invés de importamos a axios com:
+
+import axios from "../../utils/axios";
+
+Vamos descomentar os atributos:
+
+"baseUrl": './src',
+//(E definir ele como './src')
+
+-----------E--------------
+"paths": {
+    //(Definindo aqui:)
+    "@/*": ["./*"]
+},
+
+Importando então, assim:
+(se nn for, reinicia o Vs Code)
+
+import axios from "@utils/axios";
