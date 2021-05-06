@@ -4,14 +4,14 @@ import axios from "../../utils/axios";
 
 Vamos descomentar os atributos:
 
-"baseUrl": './src',
-//(E definir ele como './src')
+    "baseUrl": './src',
+(E definir ele como './src')
 
 -----------E--------------
-"paths": {
-    //(Definindo aqui:)
-    "@/*": ["./*"]
-},
+    "paths": {
+        //Isso faz com que ele crie um caminho pra baseUrl:
+        "@/*": ["./*"]
+    }
 
 Importando então, assim:
 (se nn for, reinicia o Vs Code)
