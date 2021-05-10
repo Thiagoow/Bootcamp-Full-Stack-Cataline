@@ -1,28 +1,6 @@
 import express, { response } from "express";
-/*Importa o microframework express,
-pra criarmos o mini servidor com Node.js,
-após ele ser instalado com os comandos:
 
-    npm i express
-    (instala o express)
-
-    npm i @types/express -D
-    (Usado para podermos usa-lo junto com o Ts)
-*/
-
-console.log("Hello World :)");
-/*Dando um console.log pra ver se o Ts
-foi instalado corretamente, após os comandos:
-    
-    npm i typescript ts-node-dev -D
-    (instala o Ts e o ts-node-dev 
-    como dev dependency)
-
-    npx tsc --init
-    (Cria o tsconfig.json)
-*/
-
-//------------------A partir daqui, pertence ao HTTPMethods.ts:
+//---------------------Pra executar, coloca esses comandos no server.ts:
 
 //Método que vai construir meu app:
 const app = express();
@@ -59,3 +37,13 @@ app.put("/users", (request, response) => {
 app.delete("/users", (request, response) => {
   return response.json({ message: "Deleting user..." });
 });
+
+/*
+Pra fazer a requisição do tipo GET, basta executar o comando
+"npm run dev", e acessar o link no browser do seu:
+  
+  localhost/portaAppListen/OndeFazRequisição
+
+Sendo nesse caso:
+http://localhost:3333/users
+*/
