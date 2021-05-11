@@ -49,6 +49,13 @@ usar a url: http://localhost:3333/users já que é esse o
 caminho apontado na requisição. (/users):
 */
 
+/*Essa var vai ser como nosso Db temporário
+(Oq nunca devemos fazer num projeto verdadeiro,
+já que quando desligado, todos os dados que forem
+inseridos aqui pelas requisições serão DELETADOS)
+*/
+const users = [];
+
 //Fazendo uma requisição GET/List:
 app.get("/users", (request, response) => {
   return response.json(["User1", "User2"]);
