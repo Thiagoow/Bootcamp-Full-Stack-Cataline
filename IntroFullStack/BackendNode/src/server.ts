@@ -1,4 +1,4 @@
-import express, { response } from "express";
+import express, { request, response } from "express";
 /*Importa o microframework express,
 pra criarmos o mini servidor com Node.js,
 após ele ser instalado com os comandos:
@@ -26,6 +26,9 @@ foi instalado corretamente, após os comandos:
 
 //Método que vai construir meu app:
 const app = express();
+//Define para o express que ele usará o arquivo json (Usado no ParamsTypes.ts):
+app.use(express.json());
+
 //A porta que vai ouvir meu app, com uma arrow function:
 app.listen("3333", () => {
   console.log("Back-end was started :D 😎");
@@ -40,17 +43,23 @@ Métodos de requisições HTTP (CRUD + patch):
  PATCH -> Altera uma informação específica
 */
 
-//Fazendo uma requisição GET:
+/*
+Para testar essas requisições, perceba que precisamos
+usar a url: http://localhost:3333/users já que é esse o
+caminho apontado na requisição. (/users):
+*/
+
+//Fazendo uma requisição GET/List:
 app.get("/users", (request, response) => {
   return response.json(["User1", "User2"]);
 });
 
-//Fazendo uma requisição POST:
+//Fazendo uma requisição POST/Create:
 app.post("/users", (request, response) => {
   return response.json({ message: "Creating user..." });
 });
 
-//Fazendo uma requisição PUT:
+//Fazendo uma requisição PUT/Update:
 app.put("/users", (request, response) => {
   return response.json({ message: "Updating user..." });
 });

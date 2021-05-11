@@ -1,6 +1,7 @@
 import express, { response } from "express";
 
-//---------------------Pra executar, coloca esses comandos no server.ts:
+//------------PRA EXECUTAR, COLOCA OS COMANDOS A PARTIR DAQUI NO SERVER.TS---------------//
+//-----(Ou muda o atalho no "dev" do package.json de server.ts pra NomeDesseArquivo.ts)
 
 //Método que vai construir meu app:
 const app = express();
