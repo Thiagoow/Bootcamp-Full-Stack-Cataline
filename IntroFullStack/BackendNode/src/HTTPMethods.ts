@@ -1,3 +1,21 @@
+/*-----------São os principais HTTP CODES:
+100 -> Informativos
+200 -> Sucesso
+  200 = Ok - Com sucesso e resposta
+  201 = Criado - Com sucesso, mas sem resposta
+
+300 -> Redirecionamento
+  301 = Movido permanentemente
+  302 = Movido temporariamente
+
+400 -> Erros do cliente/usuário:
+  400 = Bad request - Você fez a requisição incorretamente
+  401 = Requisição não autorizado pra você
+  404 = Requisição não encontrada
+
+500 -> Erros internos do servidor
+*/
+
 import express, { response } from "express";
 
 //------------PRA EXECUTAR, COLOCA OS COMANDOS A PARTIR DAQUI NO SERVER.TS---------------//
