@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="../icons/vue.png" sizes="32x32" />
+    <!--1º: Adiciona o Vue.js ao projeto via cdn(script) 😉:-->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+
+  <body align="center">
+    <div id="app">
+      <h1>{{name}}</h1>
+
+      <!--2º - Diretivas no Vue.js -> Um atributo do HTML,
+        que pode ser inserido em qualquer tag. Usamos nesse 
+        caso, o evento de click do Vue: "@", que é a mesma coisa
+        de usarmos o "v-on:"-->
+      <button @click="showName">Botão :D</button>
+
+      <!--3º - Loop no Vue.js utilizando o v-for, + função executado no click:-->
+      <div v-for="anyNomeIWant in users" @click="userClick(anyNomeIWant.nome)">
+        <!--Essa interpolação mostra o nome de todos os usuários da var users:-->
+        <h4>{{anyNomeIWant.nome}}</h4>
+        <!--Desestruturamos o objeto utilizando .nome para imprimir
+            APENAS o nome, senão, ele imprime todas as infos do objeto😉-->
+      </div>
+    </div>
+
+    <script>
+      var app = Vue.createApp({
+        data() {
+          return {
+            name: "Cataline :)",
+            alertMessage:
+              "Parabéns, você conseguiu entender o que são diretivas e métodos do Vue :D",
+            users: [{ nome: "Thiago" }, { nome: "George" }, { nome: "Maria" }],
+            usersMessage: "Tu clicou no user: ",
+          };
+        },
+
+        /*1º - Métodos/Funções numa aplicação Vue -> Criadas dentro da
+        var app e utilizadas fora da nossa var app*/
+        methods: {
+          showName() {
+            alert(this.alertMessage);
+            /*Usamos o "this." para se referir a todo
+            nossa aplicação geral. Sendo assim, usamos ele
+            para chamar qualquer método, ou variável dentro
+            do nosso app Vue.*/
+          },
+          //Função pra mostrar nome do Usuário clicado:
+          userClick(nome) {
+            alert(this.usersMessage + nome + " 😎");
+          },
+        },
+      });
+
+      var vm = app.mount("#app");
+    </script>
+  </body>
+</html>
