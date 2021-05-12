@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="../icons/vue.png" sizes="32x32" />
+    <!--1º: Adiciona o Vue.js ao projeto via cdn(script) 😉:-->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{{name}}</h1>
+    </div>
+    <script>
+      /*--------Para testar se o estado é reativo, tente mudar no console do browser 
+      após debugar este HTML, o valor da variável "name", ou no caso do vue= "vm.name"*/
+
+      /*Estado reativo (com Vue) = Mesmo que mudemos os valores/atributos de uma var,
+      o HTML e o CSS vai reagir automaticamente a essas alterações, e mudar oq foi mudado.
+      */
+      /*----------Exemplo:*/
+      var app = Vue.createApp({
+        data() {
+          return {
+            name: "Hello Cataline :D",
+          };
+        },
+      });
+
+      var vm = app.mount("#app");
+      /*Estado não reativo (sem Vue) = Permite alterações nos valores Js
+      do script, mas o HTML e o CSS NÃO reage e NÃO muda automaticamente essas alterações.*/
+
+      /*----Exemplo:
+
+      var name = "Hello World :)";
+
+      //Insere a var title no h1 da div app:
+      var title = document.querySelector("#app h1");
+      //Faz a var title ter o texto definido em name:
+      title.innerHTML = name;
+
+      */
+    </script>
+  </body>
+</html>
