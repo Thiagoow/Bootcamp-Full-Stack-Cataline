@@ -6,8 +6,8 @@ const app = express();
 Os 3 tipos de parâmetros mais utilizados são:
 
 Query Params -> Filtra infos de uma requisição;
-Route Params ->
-Request Body -> 
+Route Params -> Define o caminho a ser usado numa requisição;
+Request Body -> Cria um corpo de infos pra uma requisição.
 */
 
 //------------PRA EXECUTAR, COLOCA OS COMANDOS A PARTIR DAQUI NO SERVER.TS---------------//
