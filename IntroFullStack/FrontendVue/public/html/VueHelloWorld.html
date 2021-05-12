@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="../icons/vue.png" sizes="32x32" />
+    <!--1º: Adiciona o Vue.js ao projeto via cdn(script) 😉:-->
+    <script src="https://unpkg.com/vue@next"></script>
+  </head>
+
+  <body>
+    <div id="app">
+      <!--5º: Importando o dado criado com Vue com dataBinding: -->
+      <h1>{{name}}</h1>
+    </div>
+
+    <script>
+      //2º: Criando um app Vue com um objeto de opções:
+      var app = Vue.createApp({
+        //3º: Função de retorno OBRIGATÓRIO de objeto:
+        data() {
+          return {
+            name: "Hello World :D",
+          };
+        },
+      });
+
+      //4º: Importa nossa div tag com app montado pra a importação do mesmo:
+      app.mount("#app");
+    </script>
+  </body>
+</html>
