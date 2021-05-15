@@ -4,6 +4,20 @@
   <div class="users">
     <div class="container">
       <section>
+        <!--De criar usuário-->
+        <h5 class="title">Novo usuário</h5>
+        <form @submit.prevent="createUser">
+          <!--Com o @(que é a msm coisa do v-on), enviamos os dados 
+          preenchidos pelo form, utilizando a função/método createUser-->
+          <input type="text" placeholder="Nome" v-model="form.email" />
+          <!--Esse v-model="" é uma 2wayDatabinding, ou seja:
+          retorna oq já existe e envia o novo dado do form-->
+          <input type="email" placeholder="E-mail" v-model="form.name" />
+          <button type="submit">Adicionar</button>
+        </form>
+      </section>
+      <section>
+        <!--De lista de usuários-->
         <h5 class="title">Lista de usuários</h5>
         <ul>
           <!--Uma linha pra casa user a partir do id:-->
@@ -14,7 +28,8 @@
             -->
             <p>{{ user.name }}</p>
             <small>{{ user.email }}</small>
-            <a class="destroy"></a>
+            <!--Botão de deletar User com @/v-on:"nomeFunção/método(user.id)"-->
+            <a class="delete" @click="deleteUser(user.id)"></a>
           </li>
         </ul>
       </section>
@@ -27,28 +42,57 @@
 
 import { defineComponent } from "vue";
 import axios from "../src/utils/axios";
-//Tipagem dos usuários:
-interface User {
-  id: string;
-  email: string;
-  name: string;
-}
+//Importa a interface User que dá a tipagem dos usuários:
+import { User } from "../src/models";
 
 export default defineComponent({
   data() {
     return {
-      users: [] as User[]
+      users: [] as User[],
+      form: {
+        name: "",
+        email: ""
+      }
     };
   },
   // Hook pra criar o método listUsers quando a pág carregar:
   created() {
     this.listUsers();
   },
+  //Aqui ficam as funções/métodos do app:
   methods: {
     async listUsers() {
       try {
         const { data } = await axios.get("/users");
         this.users = data;
+      } catch (error) {
+        console.warn(error);
+      }
+    },
+    async createUser() {
+      try {
+        const { data } = await axios.post("/users", this.form);
+        this.users.push(data);
+
+        //Limpa o form:
+        this.form = {
+          name: "",
+          email: ""
+        };
+      } catch (error) {
+        console.warn(error);
+      }
+    },
+    async deleteUser(id: User["id"]) {
+      try {
+        //Exclui o usuário do server:
+        await axios.delete(`/users/${id}`);
+        //Encontrado o id do usuário no app:
+        const userIndex = this.users.findIndex((user) => user.id === id);
+        //Exclui o usuário da dB com array:
+        this.users.splice(userIndex, 1);
+        /*(Só 1 vez, pra apagar apenas o usuário desejado,
+        e não o outro depois dele)*/
       } catch (error) {
         console.warn(error);
       }
@@ -129,7 +173,7 @@ li {
   color: #8b98a8;
 }
 
-.destroy {
+.delete {
   background-color: #d53e6b;
   width: 24px;
   height: 24px;
@@ -142,8 +186,8 @@ li {
   right: 1.3rem;
 }
 
-.destroy:before,
-.destroy:after {
+.delete:before,
+.delete:after {
   content: "";
   width: 3px;
   height: 13px;
@@ -154,15 +198,15 @@ li {
   left: 50%;
 }
 
-.destroy:before {
+.delete:before {
   transform: translate(-50%, -50%) rotate(45deg);
 }
 
-.destroy:after {
+.delete:after {
   transform: translate(-50%, -50%) rotate(130deg);
 }
 
-.destroy:hover {
+.delete:hover {
   background-color: #984848;
 }
 </style>
