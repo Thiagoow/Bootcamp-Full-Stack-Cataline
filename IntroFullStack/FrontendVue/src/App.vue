@@ -1,19 +1,43 @@
 <template>
   <!--É nessa tag que ficam os códigos HTML local com Vue:-->
 
-  <h1>Hello World :D</h1>
+  <div class="users">
+    <div class="container">
+      <section>
+        <h5 class="title">Lista de usuários</h5>
+        <ul>
+          <!--Uma linha pra casa user a partir do id:-->
+          <li v-for="user in users" :key="user.id">
+            <!--Se o user não tivesse um identificador único (id),
+            poderíamos listar do seguinte jeito:
+              <li v-for="(user, index) in users" :key="index">
+            -->
+            <p>{{ user.name }}</p>
+            <small>{{ user.email }}</small>
+            <a class="destroy"></a>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
 //É nessa tag que ficam os códigos Js local com Vue:
 
 import { defineComponent } from "vue";
-import axios from "@/utils/axios";
+import axios from "../src/utils/axios";
+//Tipagem dos usuários:
+interface User {
+  id: string;
+  email: string;
+  name: string;
+}
 
 export default defineComponent({
   data() {
     return {
-      name: "Cataline"
+      users: [] as User[]
     };
   },
   // Hook pra criar o método listUsers quando a pág carregar:
@@ -22,8 +46,12 @@ export default defineComponent({
   },
   methods: {
     async listUsers() {
-      const response = await axios.get("/users");
-      console.log(response);
+      try {
+        const { data } = await axios.get("/users");
+        this.users = data;
+      } catch (error) {
+        console.warn(error);
+      }
     }
   }
 });
