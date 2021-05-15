@@ -1,6 +1,6 @@
 # Olá!! 🥳
 
-## Esse projeto se trata de uma aplicação simples, para entendimento de API's, e integração com front e back-end realizado com Node.js e Vue.js
+## Esse projeto se trata de uma aplicação simples, para entendimento de API's, e integração com front e back-end realizado com Node.js e Vue.js.
 
 ### 👨🏻‍💻 Para executar esse projeto, tudo o que você precisar fazer é executar esses dois comandos, na pasta BackendNode e FrontendVue:
 
