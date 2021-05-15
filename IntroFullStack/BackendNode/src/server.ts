@@ -9,6 +9,13 @@ após ele ser instalado com os comandos:
     npm i @types/express -D
     (Usado para podermos usa-lo junto com o Ts)
 */
+import cors from "cors";
+/*
+Instalado com:
+  npm i cors
+E tipagens do Ts:
+  npm i @types/cors
+*/
 import { v4 as uuid } from "uuid";
 /*Importamos aqui o UUID - Universal and Unique ID.
   Sendo necessário instala-lo -ANTES!-, com os comandos:
@@ -35,6 +42,8 @@ foi instalado corretamente, após os comandos:
 const app = express();
 //Define para o express que ele usará o arquivo json (Usado no ParamsTypes.ts):
 app.use(express.json());
+//Define com o cors que todas as aplicações poderão fazer requisições para esse backend:
+app.use(cors({ origin: "*" }));
 
 //A porta que vai ouvir meu app, com uma arrow function:
 app.listen("3333", () => {

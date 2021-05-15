@@ -8,12 +8,23 @@
 //É nessa tag que ficam os códigos Js local com Vue:
 
 import { defineComponent } from "vue";
+import axios from "@/utils/axios";
 
 export default defineComponent({
   data() {
     return {
       name: "Cataline"
     };
+  },
+  // Hook pra criar o método listUsers quando a pág carregar:
+  created() {
+    this.listUsers();
+  },
+  methods: {
+    async listUsers() {
+      const response = await axios.get("/users");
+      console.log(response);
+    }
   }
 });
 </script>
