@@ -18,8 +18,6 @@ export default defineComponent({
   Se quisermos fazer ANTES de algum dado ser alterado, usamos o beforeUpdate:*/
   beforeUpdate() {
     console.log("Antes update");
-    /*Se tentar acessar um elemento que ainda não existe,
-    como nesse caso, a respota retornada é "null"*/
   },
   /*Acontece AO MSM TEMPO da atualização de dados no componente - Tem acesso aos dados e DOM.
   Se quisermos realizar um ação depois da atualização dos dados, usamos o updated:*/

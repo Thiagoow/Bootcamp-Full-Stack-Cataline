@@ -27,5 +27,5 @@ createApp(bM).mount("#app");*/
 import bUp from "./Aulas/2-LifeCyclesHooks/3-beforeUpdate&updated.vue";
 createApp(bUp).mount("#app");*/
 /* */
-import bUm from "./Aulas/2-LifeCyclesHooks/4-beforeUnmount%unmounted.vue";
+import bUm from "./Aulas/2-LifeCyclesHooks/4-beforeUnmount&unmounted.vue";
 createApp(bUm).mount("#app");
