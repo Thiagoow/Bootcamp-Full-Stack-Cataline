@@ -1,7 +1,8 @@
 <template>
-  <h1>Helloツ {{ person.name }}</h1>
-  <h2>Your full name is: {{ fullName }}</h2>
-  <!--Test-->
+  <div align="center">
+    <h1>Helloツ {{ person.name }}</h1>
+    <h2>Your full name is: {{ fullName }}</h2>
+  </div>
 </template>
 
 <script lang="ts">
@@ -23,16 +24,12 @@ export default defineComponent({
       } as Person,
     };
   },
-  //computed - retorna um dado com algum tipo de alteração:
+  //computed - retorna um dado com algum tipo de alteração ou filtragem:
   computed: {
     fullName(): string {
       return `${this.person.name} ${this.person.surname}`;
-      //Nesse caso, nossa alteração é concatenar o nome e sobrenome numa função :)
+      //Nesse caso, a alteração é concatenar o nome e sobrenome com uma função :)
     },
   },
 });
 </script>
-
-<style scoped>
-/*Teste*/
-</style>
