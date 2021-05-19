@@ -30,5 +30,5 @@ createApp(bUp).mount("#app");*/
 import bUm from "./Aulas/2-LifeCyclesHooks/4-beforeUnmount&unmounted.vue";
 createApp(bUm).mount("#app");*/
 /* */
-import vO from "./Aulas/3-Diretivas/v-once.vue";
+import vO from "./Aulas/3-Diretivas/v-for.vue";
 createApp(vO).mount("#app");

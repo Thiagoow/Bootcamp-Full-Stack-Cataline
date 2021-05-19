@@ -19,8 +19,8 @@ button {
   transition: all 0.3s linear;
   outline: none;
   cursor: pointer;
-  /*Adiciona um efeito de glow: 
-  box-shadow: 0 0 5px 3px rgba(45, 108, 234, 0.3);*/
+  /*Adiciona um efeito de glow: */
+  box-shadow: 0 0 5px 3px rgba(45, 108, 234, 0.3);
 }
 
 button:hover {
