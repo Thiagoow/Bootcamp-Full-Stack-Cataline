@@ -1,15 +1,16 @@
 <template>
+  <div class="container">
+    <form>
+      <h5 class="title">Please type something</h5>
+      <input type="text" v-model="response" />
+    </form>
+  </div>
   <div align="center">
     <!--Mostra o elemento na DOM APENAS se ele cumpre os requisitos:-->
-    <h1 v-show="sex != 'M' && sex != 'm' && sex != 'F' && sex != 'f'">
-      You are a non binary person!
-      <h5 class="nonBinary">#lovewins</h5>
-    </h1>
-
-    <h1 v-show="sex === 'M' || sex === 'm' || sex === 'F' || sex === 'f'">
-      Your sex is or M or F! 😊 <br />
-      Be happy mate! 🤩🥳
-    </h1>
+    <h2 v-show="response != ''">
+      We receive your response! 😊 <br />
+      Thank you! 🤩🥳
+    </h2>
   </div>
 </template>
 
@@ -19,23 +20,47 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     return {
-      sex: "i",
+      response: "",
     };
   },
 });
 </script>
 
 <style scoped>
-.nonBinary {
-  margin-top: 0px;
-  margin-bottom: 50px;
-  text-align: center;
-  font-family: sans-serif;
-  letter-spacing: 0.15rem;
-  text-transform: uppercase;
-  color: #fff;
-  text-shadow: -2px 2px #f48fb1, -4px 4px #ef3550, -6px 6px #7e57c2,
-    -8px 8px #2196f3, -10px 10px #26c6da, -12px 12px #43a047, -14px 14px #eeff41,
-    -16px 16px #f9a825, -18px 18px #ff5722;
+.container {
+  margin: 4rem auto;
+  max-width: 500px;
+  width: 90%;
+  display: grid;
+  grid-gap: 2.5rem;
+}
+
+.title {
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0.7rem 0;
+}
+
+button {
+  margin: 0.7rem 0;
+}
+
+form {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+input {
+  background: transparent;
+  border: 1px solid #999fc6;
+  border-radius: 1rem;
+  padding: 0.6rem;
+  outline: none;
+  color: #e1e8ef;
+  box-shadow: 0 0 5px 3px rgba(45, 108, 234, 0.3);
+}
+
+input::placeholder {
+  color: #999fc6;
 }
 </style>
