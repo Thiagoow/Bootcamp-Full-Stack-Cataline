@@ -28,7 +28,14 @@ import bUp from "./Aulas/2-LifeCyclesHooks/3-beforeUpdate&updated.vue";
 createApp(bUp).mount("#app");*/
 /* 
 import bUm from "./Aulas/2-LifeCyclesHooks/4-beforeUnmount&unmounted.vue";
-createApp(bUm).mount("#app");*/
-/* */
-import vO from "./Aulas/3-Diretivas/v-for.vue";
-createApp(vO).mount("#app");
+createApp(bUm).m./Aulas/3-Diretivas/diretivasPersonalizadas.vue
+/*import vO from "./Aulas/3-Diretivas/DiretivasPersonalizadas.vue";
+createApp(vO).mount("#app"); */
+
+/*Importa o arquivo global usado na aula diretivasPersonalizadas.vue e diretivaPersonalizada.ts:*/
+import diretiva from "./Aulas/3-Diretivas/diretivaPersonalizada";
+const app = createApp(dir);
+app.directive("diretiva", diretiva);
+
+import dir from "./Aulas/3-Diretivas/diretivasPersonalizadas.vue";
+createApp(dir).mount("#app");
