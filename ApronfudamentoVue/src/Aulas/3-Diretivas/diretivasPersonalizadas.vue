@@ -1,5 +1,7 @@
 <template>
-  <h1 v-diretiva:background.shadow="'white'">Hello World!</h1>
+  <div align="center">
+    <h1 v-diretiva:background.shadow="'blue'">Hello Worldツ</h1>
+  </div>
 </template>
 
 <script>
@@ -12,3 +14,12 @@ export default defineComponent({
   },*/
 });
 </script>
+
+<style scoped>
+body {
+  background: #fff;
+}
+h1 {
+  width: 20rem;
+}
+</style>

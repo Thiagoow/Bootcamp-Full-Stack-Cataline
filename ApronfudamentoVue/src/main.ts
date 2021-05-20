@@ -8,34 +8,20 @@ import App from "./App.vue";
 createApp(App).mount("#app");*/
 
 /*----------------Executa os arquivos da pasta Aulas:*/
-/*
-import DataComputed from "./Aulas/1-Propriedades/1-Data&Computed.vue";
-createApp(DataComputed).mount("#app");*/
-/*
-import WatchMethods from "./Aulas/1-Propriedades/2-Watch&Methods.vue";
-createApp(WatchMethods).mount("#app");*/
-/*
-import ToDo from "./Aulas/1-Propriedades/ToDoApp.vue";
-createApp(ToDo).mount("#app");*/
-/*
-import bC from "./Aulas/2-LifeCyclesHooks/1-beforeCreate&created.vue";
-createApp(bC).mount("#app");*/
-/*
-import bM from "./Aulas/2-LifeCyclesHooks/2-beforeMount&mounted.vue";
-createApp(bM).mount("#app");*/
-/* 
-import bUp from "./Aulas/2-LifeCyclesHooks/3-beforeUpdate&updated.vue";
-createApp(bUp).mount("#app");*/
-/* 
-import bUm from "./Aulas/2-LifeCyclesHooks/4-beforeUnmount&unmounted.vue";
-createApp(bUm).m./Aulas/3-Diretivas/diretivasPersonalizadas.vue
-/*import vO from "./Aulas/3-Diretivas/DiretivasPersonalizadas.vue";
-createApp(vO).mount("#app"); */
+/*import vM from "./Aulas/3-Diretivas/DiretivasPersonalizadas.vue";
+createApp(vM).mount("#app"); */
 
-/*Importa o arquivo global usado na aula diretivasPersonalizadas.vue e diretivaPersonalizada.ts:*/
-import diretiva from "./Aulas/3-Diretivas/diretivaPersonalizada";
-const app = createApp(dir);
+/*Importa a diretiva global personalizada:
+import diretiva from "@/components/diretiva";
+//Importa a aula de diretivas personalizadas:
+import aulaDir from "./Aulas/3-Diretivas/diretivasPersonalizadas.vue";
+//Cria o app com a diretiva:
+const app = createApp(aulaDir);
+//("nomeDiretiva", varDiretivaImportada):
 app.directive("diretiva", diretiva);
+//Monta o app com a diretiva:
+app.mount("#app");*/
 
-import dir from "./Aulas/3-Diretivas/diretivasPersonalizadas.vue";
-createApp(dir).mount("#app");
+/* */
+import aS from "./Aulas/4-DynamicClasses/ArraySyntax.vue";
+createApp(aS).mount("#app");

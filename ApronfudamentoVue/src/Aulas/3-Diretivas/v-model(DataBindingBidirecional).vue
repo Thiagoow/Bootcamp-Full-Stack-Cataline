@@ -57,6 +57,12 @@ export default defineComponent({
       fruit: "",
     };
   },
+  //Se quiséssemos enviar para um db os dados:
+  methods: {
+    send() {
+      //axios.post("/cadastroURL", this.form);
+    },
+  },
 });
 </script>
 
