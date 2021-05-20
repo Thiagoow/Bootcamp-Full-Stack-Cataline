@@ -66,7 +66,9 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style>
+/*Se tiver como scoped, não vai alterar os dados definidos pelo 
+css global, importado no main.ts*/
 .label {
   font-family: "JetBrains Mono";
   font-size: 0.5;
@@ -91,5 +93,9 @@ form {
   font-size: 0.5;
   padding-bottom: 1rem;
   border-bottom: 2px solid #000;
+}
+
+p {
+  display: fixed;
 }
 </style>

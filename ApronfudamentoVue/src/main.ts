@@ -23,5 +23,5 @@ app.directive("diretiva", diretiva);
 app.mount("#app");*/
 
 /* */
-import aS from "./Aulas/4-DynamicClasses/ArraySyntax.vue";
-createApp(aS).mount("#app");
+import a5 from "./Aulas/5-Componentização/EstilizandoFilho.vue";
+createApp(a5).mount("#app");

@@ -15,7 +15,9 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style>
+/*Se tiver como scoped, não vai alterar os dados definidos pelo 
+css global, importado no main.ts*/
 body {
   background: #fff;
 }
