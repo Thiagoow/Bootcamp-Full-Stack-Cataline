@@ -1,4 +1,5 @@
 <template>
+  <!--Classe dinâmica com o "v-bind"/":"--->
   <button :class="['props-button-styled', color]">
     {{ text }}
   </button>
