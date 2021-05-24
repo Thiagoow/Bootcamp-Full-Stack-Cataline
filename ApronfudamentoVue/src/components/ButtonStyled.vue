@@ -1,5 +1,8 @@
 <template>
-  <button>Botão Estilizado Vermelho 😎</button>
+  <button class="buttonStyled">
+    Botão Estilizado Vermelho 😎
+    <span>YEY</span>
+  </button>
 </template>
 
 <script lang="ts">
