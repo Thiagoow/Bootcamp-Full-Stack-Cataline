@@ -8,7 +8,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 
-//Cria a tipagem de tipo color usada no "validator:", no objeto props, aqui embaixo:
+//Cria a tipagem de tipo color usada no "validator", no objeto props, aqui embaixo:
 type color = "success" | "danger" | "primary";
 
 export default defineComponent({
