@@ -23,5 +23,5 @@ app.directive("diretiva", diretiva);
 app.mount("#app");*/
 
 /* */
-import a5 from "./Aulas/5-Componentização/Props.vue";
+import a5 from "./Aulas/5-Componentização/Slots.vue";
 createApp(a5).mount("#app");

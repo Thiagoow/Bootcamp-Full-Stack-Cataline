@@ -2,19 +2,26 @@
   <!--Classe dinâmica com o "v-bind"/":"--->
   <button :class="['props-button-styled', color]">
     {{ text }}
+    {{ user }}
   </button>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+//Usamos o PropType pra definir props não simples (objetos ou arrays):
+import { defineComponent, PropType } from "vue";
 
 //Cria a tipagem de tipo color usada no "validator", no objeto props, aqui embaixo:
 type color = "success" | "danger" | "primary";
 
+//Interface para o prop não simples "user", usada no objeto props, tbm aqui embaixo:
+interface User {
+  nome: string;
+}
+
 export default defineComponent({
   //Aqui ficam as propriedades aplicáveis para esse componente:
   props: {
-    //Tal componente pode ter a propriedade:
+    //Tal componente tem a propriedade obrigatória:
     text: {
       //Com os tipos:
       type: [String, Number],
@@ -31,6 +38,15 @@ export default defineComponent({
       validator: (value: color) => {
         return ["success", "danger", "primary"].includes(value);
       },
+    },
+    //Tal componente pode ter a propriedade:
+    user: {
+      //Com o tipo de propriedade complexa (array ou objeto):
+      type: Object as PropType<User>,
+      //Se essa prop fosse do tipo array -> <NomeProp[]>,
+
+      //Se a prop é obrigatória:
+      required: false,
     },
   },
 });
