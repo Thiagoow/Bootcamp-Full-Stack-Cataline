@@ -7,9 +7,15 @@ body {
   height: 100%;
 }
 
+h1 {
+  color: #e1e8ef;
+  text-shadow: 0 3px 3px rgba(255, 255, 255, 0.3);
+}
+
 button {
   background-color: #2d6cea;
   color: #e1e8ef;
+  font-weight: bold;
   display: flex;
   margin: 0.5rem;
   border: none;
@@ -24,7 +30,7 @@ button {
 }
 
 button:hover {
-  background-color: #1b5cdc;
+  background-color: #0843b8;
 }
 
 a {
@@ -34,4 +40,29 @@ a {
   height: 100%;
   font-weight: bold;
   color: #2c6be7;
+}
+
+.centralizar {
+  /*Centralizar -- e | -> 
+  align="center" na div +:
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+  /*Centralizar horizontalmente,
+  mas na mesma linha -> flexbox:;
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+
+  /*Centralizar horizontalmente, mas 
+  NÃO na mesma linha -> grid layout:*/
+  display: grid;
+  place-items: center;
+
+  /*Centralizar verticalmente: 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);*/
 }

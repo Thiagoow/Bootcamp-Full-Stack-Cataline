@@ -29,7 +29,7 @@ app.directive("diretiva", diretiva);
 app.mount("#app");*/
 
 /* */
-import App from "./Aulas/5-Componentização/DynamicComponents.vue";
+import App from "./Aulas/6-Transições/Hooks.vue";
 const app = createApp(App);
 /*Componente importado globalmente (FICA DEPOIS DO CreateApp())
 app.component("IdComponenteGlobal", GlobalButtonStyled);*/

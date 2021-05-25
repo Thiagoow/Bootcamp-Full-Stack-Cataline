@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.3",
+    "animate.css": "^4.1.1",
     "vue": "^3.0.0"
   },
   "devDependencies": {
