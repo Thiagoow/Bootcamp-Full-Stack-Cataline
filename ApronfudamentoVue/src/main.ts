@@ -6,6 +6,9 @@ import "../public/global.css";
 //Importa a biblioteca de ícones FontAwesome5 pro css:
 import "@fortawesome/fontawesome-free/css/all.css";
 
+/*Se eu quisesse importar um componente como global:
+import GlobalButtonStyled from "@/components/GlobalButtonStyled.vue";*/
+
 /*Importa o arquivo app.vue:
 import App from "./App.vue";
 createApp(App).mount("#app");*/
@@ -26,5 +29,8 @@ app.directive("diretiva", diretiva);
 app.mount("#app");*/
 
 /* */
-import a5 from "./Aulas/5-Componentização/Global.vue";
-createApp(a5).mount("#app");
+import App from "./Aulas/5-Componentização/DynamicComponents.vue";
+const app = createApp(App);
+/*Componente importado globalmente (FICA DEPOIS DO CreateApp())
+app.component("IdComponenteGlobal", GlobalButtonStyled);*/
+app.mount("#app");
