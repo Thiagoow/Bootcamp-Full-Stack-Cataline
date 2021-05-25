@@ -1,9 +1,7 @@
 <template>
-  <!--Classe dinâmica com o "v-bind"/":"--->
-  <button :class="['props-button-styled', color]">
-    <slot name="before" />
+  <!----->
+  <button class="button-styled">
     {{ text }}
-    <slot name="after" />
   </button>
 </template>
 

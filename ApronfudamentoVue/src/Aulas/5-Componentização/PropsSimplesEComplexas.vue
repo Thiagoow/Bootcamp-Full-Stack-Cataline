@@ -1,5 +1,5 @@
 <template>
-  <div class="content" align="center">
+  <div class="centralizar" align="center">
     <PropsButtonStyled text="Cadastro" color="primary" />
     <!--Uma prop é uma propriedade/atributo, que vamos passar para um elemento. Nesse caso,
   temos dois botões criados com o mesmo componente (PropsButtonStyled), mas cada um deles irá
@@ -36,13 +36,27 @@ export default defineComponent({
 </script>
 
 <style scoped>
-.content {
-  /*Centraliza os botões, com auxílio 
-  do align="center" na div "content":*/
+.centralizar {
+  /*Centralizar -- e | -> align="center" na div +:*/
   position: absolute;
-  justify-content: center;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+
+  /*Centralizar horizontalmente,
+  mas na mesma linha -> flexbox: 
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+
+  /*Centrailizar horizontalmente, mas 
+  NÃO na mesma linha -> grid layout:
+  display: grid;
+  place-items: center;*/
+
+  /*Centralizar verticalmente: 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);*/
 }
 </style>

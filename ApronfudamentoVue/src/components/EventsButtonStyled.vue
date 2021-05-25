@@ -1,9 +1,12 @@
 <template>
-  <!--Classe dinâmica com o "v-bind"/":"--->
-  <button :class="['props-button-styled', color]">
-    <slot name="before" />
+  <!--Criando um evento customizado, usamos a sintaxe:
+  "$emit('NomeEvento', 'Dados/MétodosQueExecutamNoEvento')"
+  --->
+  <button
+    class="button-styled"
+    @click="$emit('eventoCustom', 'StringDeEventoCustomExecutada🤩😎')"
+  >
     {{ text }}
-    <slot name="after" />
   </button>
 </template>
 

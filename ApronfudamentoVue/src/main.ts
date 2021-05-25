@@ -3,6 +3,9 @@ import { createApp } from "vue";
 /* Importa o arquivo global.css:*/
 import "../public/global.css";
 
+//Importa a biblioteca de ícones FontAwesome5 pro css:
+import "@fortawesome/fontawesome-free/css/all.css";
+
 /*Importa o arquivo app.vue:
 import App from "./App.vue";
 createApp(App).mount("#app");*/
@@ -23,5 +26,5 @@ app.directive("diretiva", diretiva);
 app.mount("#app");*/
 
 /* */
-import a5 from "./Aulas/5-Componentização/Slots.vue";
+import a5 from "./Aulas/5-Componentização/EventsCustomizados.vue";
 createApp(a5).mount("#app");
