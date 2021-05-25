@@ -1,5 +1,7 @@
 <template>
-  <GlobalButtonStyled text="Botãoツ" />
+  <div class="centralizar" align="center">
+    <GlobalButtonStyled text="Botãoツ" />
+  </div>
 </template>
 
 <script lang="ts">
@@ -13,4 +15,28 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style scoped>
+.centralizar {
+  /*Centralizar -- e | -> align="center" na div +:
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);*/
+
+  /*Centralizar horizontalmente,
+  mas na mesma linha -> flexbox: 
+  display: flex;
+  align-items: center;
+  justify-content: center;*/
+
+  /*Centrailizar horizontalmente, mas 
+  NÃO na mesma linha -> grid layout:*/
+  display: grid;
+  place-items: center;
+
+  /*Centralizar verticalmente: 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);*/
+}
+</style>

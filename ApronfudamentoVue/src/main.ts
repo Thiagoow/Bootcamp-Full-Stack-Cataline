@@ -26,5 +26,5 @@ app.directive("diretiva", diretiva);
 app.mount("#app");*/
 
 /* */
-import a5 from "./Aulas/5-Componentização/EventsCustomizados.vue";
+import a5 from "./Aulas/5-Componentização/Global.vue";
 createApp(a5).mount("#app");
