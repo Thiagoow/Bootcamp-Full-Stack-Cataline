@@ -15,9 +15,9 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import Home from "@/Aulas/5-Componentização/html/Home.vue";
-import About from "@/Aulas/5-Componentização/html/Sobre.vue";
-import Contact from "@/Aulas/5-Componentização/html/Contato.vue";
+import Home from "@/components/html/Home";
+import About from "@/components/html/Sobre";
+import Contact from "@/components/html/Contato";
 
 export default defineComponent({
   components: { Home, About, Contact },
