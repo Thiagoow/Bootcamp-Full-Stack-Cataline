@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Layout</title>
+    <style>
+      body {
+        background: #00006d;
+        height: 100vh;
+        overflow-y: hidden;
+        margin: 2rem;
+        font-family: sans-serif;
+      }
+      .item {
+        background: white;
+        border-radius: 5px;
+      }
+      .gridContainer {
+        display: grid;
+        grid-gap: 1rem 1rem;
+        /*Comprimento da coluna principal 100%(x) e do menu de navegação(y):*/
+        grid-template-columns: 1fr 70px;
+        /*Altura do header(x), content(y) e footer(z):*/
+        grid-template-rows: auto 250px auto;
+        /*1º- Fixando áreas no CSS -> Usamos o grid-template-areas: "classe1, classe2, classe3";*/
+        grid-template-areas: "header header" "conteúdo nav" "footer footer";
+      }
+      /*2º- Fixando áreas no css das classes com o grid-area:*/
+      .header {
+        grid-area: header;
+      }
+      .content {
+        grid-area: conteúdo;
+      }
+      .footer {
+        grid-area: footer;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Com as áres fixadas, eu posso até mudar a posição das
+    divs aqui no HTML, sem problemas, pois elas possuem posições fixas
+    no css 😎-->
+    <div class="gridContainer">
+      <header class="header item">
+        <h1>Cabeçalho</h1>
+      </header>
+      <main class="content item">
+        <h1>Conteúdo</h1>
+      </main>
+      <nav class="nav item">
+        <h1>nav</h1>
+      </nav>
+      <footer class="footer item">
+        <h1>Rodapé</h1>
+      </footer>
+    </div>
+  </body>
+</html>
