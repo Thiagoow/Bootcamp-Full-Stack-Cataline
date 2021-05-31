@@ -19,28 +19,19 @@
       .gridContainer {
         display: grid;
         grid-gap: 1rem 1rem;
-        grid-template-columns: 1fr;
-        /*Altura do header(x), content(y) e footer(z):*/
-        grid-template-rows: auto 250px auto;
-        /*1º- Fixando áreas no CSS -> Usamos o grid-template-areas: "classe1, classe2, classe3";*/
-        grid-template-areas: "header" "conteúdo" "footer";
-      }
-      /*2º- Fixando áreas no css das classes com o grid-area:*/
-      .header {
-        grid-area: header;
-      }
-      .content {
-        grid-area: conteúdo;
-      }
-      .footer {
-        grid-area: footer;
+        grid:
+          "header" auto
+          "conteúdo" 170px
+          "footer" auto
+          / 1fr;
+        /* Sintaxe do atalho grid:
+            "classeLinha" altura 
+            / TamanhoColuna
+        */
       }
     </style>
   </head>
   <body>
-    <!--Com as áres fixadas, eu posso até mudar a posição das
-    divs aqui no HTML, sem problemas, pois elas possuem posições fixas
-    no css 😎-->
     <div class="gridContainer">
       <header class="header item">
         <h1>Cabeçalho</h1>

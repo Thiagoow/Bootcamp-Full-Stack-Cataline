@@ -24,7 +24,10 @@
         /*Altura do header(x), content(y) e footer(z):*/
         grid-template-rows: auto 250px auto;
         /*1º- Fixando áreas no CSS -> Usamos o grid-template-areas: "classe1, classe2, classe3";*/
-        grid-template-areas: "header header" "conteúdo nav" "footer footer";
+        grid-template-areas:
+          "header header"
+          "conteúdo nav"
+          "footer footer";
       }
       /*2º- Fixando áreas no css das classes com o grid-area:*/
       .header {
