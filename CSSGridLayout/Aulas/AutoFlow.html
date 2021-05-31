@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Layout</title>
+    <style>
+      body {
+        background: #00006d;
+        height: 100vh;
+        overflow-y: hidden;
+        margin: 2rem;
+        font-family: sans-serif;
+      }
+      .gridContainer {
+        display: grid;
+        /*O fluxo automática com grid define como será dada a disposição de itens
+        na grid, podendo ser: "row" ou "column", apenas.*/
+        grid-auto-flow: column;
+        grid-gap: 1rem 1rem;
+      }
+      .item {
+        background: white;
+        border-radius: 5px;
+        border: 1px solid black;
+        height: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gridContainer">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

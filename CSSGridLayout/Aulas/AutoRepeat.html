@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Layout</title>
+    <style>
+      body {
+        background: #00006d;
+        height: 100vh;
+        overflow-y: hidden;
+        margin: 2rem;
+        font-family: sans-serif;
+      }
+      .gridContainer {
+        display: grid;
+        grid-gap: 1rem 1rem;
+        /*10 colunas, criadas com a função repeat(xVezes, doTamanho)*/
+        grid-template-columns: repeat(10, 1fr);
+        /*Uma linha:*/
+        grid-template-rows: 30px;
+      }
+      .item {
+        background: white;
+        border-radius: 5px;
+        border: 1px solid black;
+        height: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gridContainer">
+      <!--Criado com a função do VS Code para repetição:
+        .nomeClasse*NumVezes -> .item*10-->
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>

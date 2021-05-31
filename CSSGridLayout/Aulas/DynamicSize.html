@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Layout</title>
+    <style>
+      body {
+        background: #00006d;
+        height: 100vh;
+        overflow-y: hidden;
+        margin: 2rem;
+        font-family: sans-serif;
+      }
+      .gridContainer {
+        display: grid;
+        grid-gap: 1rem 1rem;
+        /*2 colunas, do tamanho dinâmico mínimo 20rem, e máximo 50%(duas frações)*/
+        grid-template-columns: repeat(2, minmax(20rem, 2fr));
+        /* 1 linha, do tamanho dinâmico mínimo 15px, e máximo 100%(1fr)*/
+        grid-template-rows: minmax(15px, 1fr);
+      }
+      .item {
+        background: white;
+        border-radius: 5px;
+        border: 1px solid black;
+        height: 10rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gridContainer">
+      <div class="item"></div>
+      <div class="item"></div>
+      <div class="item"></div>
+    </div>
+  </body>
+</html>
