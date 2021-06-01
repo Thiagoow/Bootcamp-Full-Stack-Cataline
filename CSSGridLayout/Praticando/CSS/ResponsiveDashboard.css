@@ -50,14 +50,16 @@ footer {
   align-items: center;
 }
 
-.item {
+.blog-item {
   background: black;
 }
 
+/*Esconde a barra de nav, quando a tela estiver muito pequena:*/
 @media (max-width: 650px) {
   aside {
     display: none;
   }
+  /*Remove a coluna da nav, pra não ficar um buraco:*/
   .container {
     display: grid;
     grid-template-columns: 1fr;
