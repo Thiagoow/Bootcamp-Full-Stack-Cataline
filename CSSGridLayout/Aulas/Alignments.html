@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS Grid Layout</title>
+    <style>
+      body {
+        background: #00006d;
+        height: 100vh;
+        overflow-y: hidden;
+        margin: 2rem;
+        font-family: sans-serif;
+      }
+      .item {
+        background: white;
+        border: 1px solid black;
+        border-radius: 5px;
+      }
+      .gridContainer {
+        display: grid;
+        grid-gap: 1rem 1rem;
+        height: 500px;
+        background: aqua;
+        padding: 0.5rem;
+        grid: auto auto / auto auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="gridContainer">
+      <div class="item">
+        <h1>1</h1>
+      </div>
+
+      <div class="item">
+        <h1>2</h1>
+      </div>
+
+      <div class="item">
+        <h1>3</h1>
+      </div>
+
+    <div class="item">
+      <h1>4</h1>
+    </div>
+  </body>
+</html>
