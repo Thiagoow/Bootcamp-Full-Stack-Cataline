@@ -1,0 +1,42 @@
+body {
+  background: #00006d;
+  height: 100vh;
+  overflow-y: hidden;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid: auto / 400px;
+  justify-content: center;
+  align-items: center;
+}
+
+.login {
+  display: grid;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  grid-template-columns: 1fr;
+  grid-auto-rows: auto;
+  grid-gap: 1rem;
+  justify-items: center;
+}
+
+.login-input {
+  width: 100%;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 10px;
+  outline: none;
+}
+
+.login-buttonLogin {
+  color: white;
+  background-color: black;
+  border: 1px solid black;
+  padding: 0.5rem;
+  border-radius: 10px;
+}

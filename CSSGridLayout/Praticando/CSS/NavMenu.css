@@ -1,0 +1,37 @@
+body {
+  background: #00006d;
+  height: 100vh;
+  overflow-y: hidden;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.container {
+  display: grid;
+  height: 100%;
+  grid: auto / 600px;
+  justify-content: center;
+  align-content: center;
+}
+
+.navMenu {
+  display: grid;
+  background: white;
+  border-radius: 5px;
+  padding: 0.5rem 1rem;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.menu {
+  list-style: none;
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: end;
+  grid-gap: 1.5rem;
+}
