@@ -24,7 +24,29 @@
         background: aqua;
         padding: 0.5rem;
         grid: auto auto / auto auto;
+        /*Alinhar as grids -> classe pai:
+        ---------valorDefault = stretch--------
+            horizontal = justify
+            vertical = align
+            content = Grids
+            items = Conteúdo das grids
+        */
+        justify-content: stretch;
+        align-content: stretch;
+        justify-items: stretch;
+        align-items: stretch;
       }
+    /*Alinhar itens específicos -> classes filho:
+    ---------valorDefault = stretch--------
+        justify-self: horizontal
+        align-self: vertical
+    */
+    .item:nth-child(1) {
+        justify-self: stretch;
+    }
+    .item:nth-child(2) {
+        align-self: center;
+    }
     </style>
   </head>
   <body>
