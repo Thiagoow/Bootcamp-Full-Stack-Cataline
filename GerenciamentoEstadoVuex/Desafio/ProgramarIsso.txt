@@ -1,0 +1,15 @@
+Material para download
+https://www.dropbox.com/sh/qp0grxidbn1gv8c/AADNrX3S4XNyur-g7RMTlnYya?dl=0
+
+Adobe XD Online
+https://xd.adobe.com/view/43004fbd-7dfc-4765-9d78-21b38e5011b5-1653/
+
+Projeto funcionando
+https://faq-vuex.herokuapp.com/
+
+Para fazer importação do conteúdo do json:
+    import { faqCategories } from '@/utils/db.json'
+
+Projeto Finalizado caso precise de uma ajuda:
+https://github.com/cataline4learning/faq-vuex
+https://github.com/4scencio/vuex-challenge
