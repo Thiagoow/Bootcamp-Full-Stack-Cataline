@@ -1,26 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <ul>
+    <li v-for="ToDo in $allToDos" :key="ToDo.id">
+      {{ ToDo.text }}
+    </li>
+  </ul>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
 export default {
-  name: "App",
-  components: {
-    HelloWorld,
+  computed: {
+    //Função que lista todos os ToDos presentes no index.js:
+    $allToDos() {
+      return this.$store.getters.$allToDos;
+    },
+  },
+  /*Com o life cycle hook de quando a aplicação for criada,
+  executamos a action lá do index.js, de chamar todos os ToDos criados:*/
+  created() {
+    this.$store.dispatch("listToDos");
+    //Dispatch -> disparar. Nesse caso, a action.
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
