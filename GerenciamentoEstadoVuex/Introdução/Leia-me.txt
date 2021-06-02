@@ -1,0 +1,4 @@
+Esse projeto foi criado por mim mesmo, utilizando Js, HTML, CSS, Vue e Vuex.
+
+Para ver o que fora criado antes da realização desse projeto na aula, copie o conteúdo dos arquivos
+em nessa página, para os arquivos de mesmo nome dentro da pasta src.

@@ -1,0 +1,122 @@
+{
+  "faqCategories": [
+    {
+      "id": 1,
+      "title": "Basecamp",
+      "icon": "rocket.svg",
+      "questions": [
+        {
+          "id": 1,
+          "title": "Basecamp é gratuito?",
+          "content": "O <a href='https://www.cataline.io/basecamp' target='_blank'>Basecamp</a> é o nosso campo de base, onde você encontra cursos gratuitos focados em tudo o que você precisa para ser um ótimo programador e conquistar uma base sólida no assunto."
+        },
+        {
+          "id": 2,
+          "title": "Posso iniciar o Basecamp?",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, blanditiis? Provident distinctio animi delectus odio, recusandae repudiandae tenetur possimus tempora, doloremque assumenda quia obcaecati asperiores consequuntur id quis pariatur adipisci!"
+        },
+        {
+          "id": 3,
+          "title": "Basecamp é pra mim?",
+          "content": "O Basecamp foi feito para quem está querendo começar na carreira de programação, mas está inseguro ou não sabe por onde iniciar. <br/> <br/> Por isso o nome Basecamp, já que é a nossa Jornada base, que tem o objetivo de tirar suas dúvidas inicias, de acolher e fornecer a segurança que você precisa para seguir adiante. <br/> <br/> Mas se você já se sente seguro e deseja ir mais a fundo para dominar o Front-End e Back-End, dê uma olhada no Bootcamp."
+        },
+        {
+          "id": 4,
+          "title": "Oferece certificado?",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, blanditiis? Provident distinctio animi delectus odio, recusandae repudiandae tenetur possimus tempora, doloremque assumenda quia obcaecati asperiores consequuntur id quis pariatur adipisci!"
+        },
+        {
+          "id": 5,
+          "title": "Como se inscrever no Basecamp?",
+          "content": "É só acessar a nossa estação e fazer o seu cadastro! <br/> <br/> Escolha o curso que tem mais a ver com você no momento e comece a devorá-lo!"
+        },
+        {
+          "id": 6,
+          "title": "Não recebi o acesso por e-mail",
+          "content": "Normalmente o e-mail de confirmação é enviado imediatamente, mas pode acontecer de demorar alguns minutos até chegar em sua caixa de entrada. <br/> <br/> Não se esqueça de checar o lixo eletrônico ou a caixa de spam. <br/> <br/> Se você já esperou algum tempo e ainda não recebeu o e-mail, escreva para a gente em <a href='mailto:contato@cataline.io' target='_blank'>contato@cataline.io</a> ou você pode falar com algum admin através da nossa comunidade lá no discord. Não esqueça de informar o e-mail que você utilizou para se inscrever."
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Bootcamp",
+      "icon": "astronaut-helmet.svg",
+      "questions": [
+        {
+          "id": 7,
+          "title": "O que é Bootcamp?",
+          "content": "<a href='https://bootcamp.cataline.io/' target='_blank'>Bootcamp</a> é uma metodologia de ensino imersiva que foca nas habilidades mais relevantes de determinada área. <br/><br/> O Bootcamp da Cataline não é diferente. A proposta é você se tornar um(a) Programador(a) Full Stack, ou seja, dominar o Front-End e o Back-End.<br/><br/> Full Stack é a tendência do mercado de trabalho e tudo o que você precisa para tirar suas próprias ideias do papel sem depender de outros desenvolvedores. "
+        },
+        {
+          "id": 8,
+          "title": "Qual o formato do Bootcamp?",
+          "content": "Todos os treinamentos são 100% online. <br/><br/> Consideramos nosso Bootcamp como uma Jornada. <br/><br/>  Dentro de cada Jornada temos vários cursos e cada um deles tem seus respectivos módulos e aulas. <br/><br/> Para mais informações, <a href='https://bootcamp.cataline.io/' target='_blank'>clique aqui.</a>"
+        },
+        {
+          "id": 9,
+          "title": "Quais os requisitos do Bootcamp?",
+          "content": "Para o treinamento não ser doloroso, é interessante que você entenda o básico de HTML, CSS e Javascript. <br/><br/> Caso você ainda não se sinta seguro nessas tecnologias, oferecemos toda essa base prévia no Basecamp, totalmente gratuito."
+        },
+        {
+          "id": 10,
+          "title": "Sempre terei acesso ao Bootcamp?",
+          "content": "A validade de acesso é de 1 (um) ano, ou seja, você pode assistir as aulas no momento que for melhor para você dentro deste período. <br/><br/> Durante esse tempo, você terá acesso a todas as atualizações de conteúdo. Isso inclui novos cursos que forem adicionados ao Bootcamp mesmo após a data da sua inscrição. <br/><br/> Estabelecemos esse prazo pois nosso objetivo é sempre manter nossos cursos atualizados na mesma velocidade com que as tecnologias atualizam, o que, convenhamos, é muito rápido!"
+        },
+        {
+          "id": 11,
+          "title": "Qual a carga horária do Bootcamp?",
+          "content": "Se você está em busca daqueles cursos que possuem uma carga horária enorme, provavelmente a Cataline não é para você. <br/><br/> Nossa proposta é fazer com que você aprenda o que é essencial para dominar o Front-End e o Back-End no menor tempo possível. Nossos cursos têm o foco em serem mais enxutos, práticos e diretos ao ponto. Por conta disso, não consideramos a carga horária um fator essencial. <br/><br/> Afinal, o que é mais importante para você: ficar estudando muito tempo ou atingir seus objetivos rapidamente?"
+        },
+        {
+          "id": 12,
+          "title": "Qual o valor do Bootcamp?",
+          "content": "Preço é uma coisa relativa.  <br/><br/> Se eu disser que um carro custa R$ 50.000, você pode achar caro ou barato. <br/><br/> Mas se eu disser que esse carro é uma Ferrari, ninguém vai achar caro, não é mesmo? Por isso a gente nunca fala o preço antes de explicar exatamente o que você está comprando. <br/><br/> O valor está relacionado ao formato, proposta e resultado que entrega. <br/><br/> Para mais informações, <a href='https://bootcamp.cataline.io/' target='_blank'>clique aqui.</a>"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Cataline",
+      "icon": "student-hat.svg",
+      "questions": [
+        {
+          "id": 13,
+          "title": "O que é a Cataline?",
+          "content": "A Cataline é uma plataforma de educação em Tecnologia onde você encontra tudo o que precisa para alcançar, no menor tempo possível, seus objetivos como programador <br/> <br/>  Contamos com uma stack extremamente enxuta (Vue + Node) e uma comunidade incrível de programadores e muito conteúdo gratuito de qualidade. <br/> <br/> Dentro da nossa estação, você vai ter acesso aos cursos do Basecamp, para quem está dando os primeiros passos, e o Bootcamp, onde você encontra os cursos mais robustos e intensivos que vão te transformar em um programador Full Stack"
+        },
+        {
+          "id": 14,
+          "title": "Como a Cataline pode te ajudar?",
+          "content": "Se você quer evoluir na sua carreira, entrar no mercado de trabalho, tirar suas ideias do papel e transformá-las em um negócio, ou simplesmente dominar as tecnologias mais modernas de desenvolvimento web, você está no lugar certo <br/> <br/> E para te ajudar a evoluir mais rápido como programador e enfrentar os desafios do dia a dia, nós separamos nossos cursos em duas Jornadas. <br/> <br/> O Basecamp, que é uma série de cursos gratuitos para quem quer dar os primeiros passos no mundo da programação web"
+        },
+        {
+          "id": 15,
+          "title": "Como funciona a comunidade?",
+          "content": "Temos uma comunidade totalmente aberta para qualquer dev que tenha interesse em ir para o próximo nível ou, claro, o desejo de ajudar outros devs! <br/> <br/> Para fazer parte desse movimento incrível, basta acessar o nosso canal no discord."
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Parcerias",
+      "icon": "partnership.svg",
+      "questions": [
+        {
+          "id": 16,
+          "title": "Como ser parceiro da Cataline?",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, blanditiis? Provident distinctio animi delectus odio, recusandae repudiandae tenetur possimus tempora, doloremque assumenda quia obcaecati asperiores consequuntur id quis pariatur adipisci!"
+        },
+        {
+          "id": 17,
+          "title": "Requisitos para ser parceiro",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, blanditiis? Provident distinctio animi delectus odio, recusandae repudiandae tenetur possimus tempora, doloremque assumenda quia obcaecati asperiores consequuntur id quis pariatur adipisci!"
+        },
+        {
+          "id": 18,
+          "title": "Saiba mais sobre o programa de parceria",
+          "content": "Lorem ipsum dolor sit amet consectetur adipisicing elit. At, blanditiis? Provident distinctio animi delectus odio, recusandae repudiandae tenetur possimus tempora, doloremque assumenda quia obcaecati asperiores consequuntur id quis pariatur adipisci!"
+        }
+      ]
+    }
+  ]
+}
