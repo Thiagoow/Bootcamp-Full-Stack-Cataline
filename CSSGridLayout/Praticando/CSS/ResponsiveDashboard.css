@@ -1,8 +1,8 @@
 body {
+  font-family: sans-serif;
   background: #00006d;
   height: 100vh;
   margin: 0;
-  font-family: sans-serif;
 }
 
 .container {
@@ -17,6 +17,16 @@ body {
     "footer footer";
 }
 
+header,
+aside,
+main,
+footer {
+  background: white;
+  display: grid;
+  justify-content: center;
+  align-content: center;
+}
+
 header {
   grid-area: header;
 }
@@ -26,11 +36,11 @@ aside {
 }
 
 main {
-  grid-area: main;
-  display: grid;
   justify-content: stretch;
   align-content: stretch;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-area: main;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
   grid-auto-rows: 150px;
   grid-gap: 1rem;
   padding: 1rem;
@@ -40,29 +50,18 @@ footer {
   grid-area: footer;
 }
 
-header,
-aside,
-main,
-footer {
-  background: white;
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-
 .blog-item {
   background: black;
 }
 
-/*Esconde a barra de nav, quando a tela estiver muito pequena:*/
 @media (max-width: 650px) {
   aside {
     display: none;
   }
-  /*Remove a coluna da nav, pra não ficar um buraco:*/
   .container {
-    display: grid;
     grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr 75px;
+    grid-gap: 1rem;
     grid-template-areas:
       "header"
       "main"
