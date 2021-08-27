@@ -15,6 +15,11 @@ export default class User extends BaseModel {
   public password: string
 
   @column()
+  /* O cargo/role do usuário pode ser
+  admin ou normal: */
+  public role: 'admin' | 'normal'
+
+  @column()
   public rememberMeToken?: string
 
   @column.dateTime({ autoCreate: true })

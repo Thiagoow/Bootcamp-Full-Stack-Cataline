@@ -5,18 +5,19 @@
 Install [Docker Compose](https://docs.docker.com/compose/install/).
 
 ```bash
-# Create container with MySQL
+# Criar o container com MySQL:
 $ docker-compose up -d
 
-# Create database structure
+# Criar as tabelas/estruturas na dB:
 $ node ace migration:run
 
-# install dependencies
+# Instalar dependências:
 $ npm install
 
-# server with changes watcher
+# Rodar o servidor local que muda a cada alteração:
 $ npm run dev
 
-# build for production and launch server
+# Buildar pra produção e executar o servidor:
 $ npm run build
 $ npm run start
+```

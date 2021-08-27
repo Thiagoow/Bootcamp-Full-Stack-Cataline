@@ -13,6 +13,9 @@ export default class UsersSchema extends BaseSchema {
       table.string('email', 255).notNullable()
       //Não devo alterar esses dois abaixo NUNCA/DE JEITO NENHUM:
       table.string('password', 180).notNullable()
+      /* Coluna a qual define o cargo/role do usuário, sendo o valor
+      default 'normal', caso não seja especificado ;) */
+      table.enu('role', ['normal', 'admin']).notNullable().defaultTo('normal')
       table.string('remember_me_token').nullable()
 
       /**
