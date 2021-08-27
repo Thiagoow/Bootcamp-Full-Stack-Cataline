@@ -7,6 +7,14 @@ export default class PostsController {
     /* Pega todos os posts da Db, mas com o await
     para que ele não retorne vazio: */
     const posts = await Post.all()
+    /* Usando o método all(), ele lista pra mim todos
+    os posts em ordem de CRIAÇÃO. Do mais recente ao
+    mais antigo. Para mudar isso, e listar por ordem
+    do id por exemplo (do mais antigo ao mais recente),
+    basta usar ao invés do all() o query().orderBy():
+      
+      const posts = await Post.query().orderBy('id')
+    */
 
     //Retorna todas as postagens encontradas na dB:
     return posts
