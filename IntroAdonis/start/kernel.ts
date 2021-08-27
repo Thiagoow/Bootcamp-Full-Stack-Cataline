@@ -38,4 +38,8 @@ Server.middleware.register([() => import('@ioc:Adonis/Core/BodyParser')])
 | Route.get('dashboard', 'UserController.dashboard').middleware('auth')
 |
 */
-Server.middleware.registerNamed({})
+Server.middleware.registerNamed({
+  /* Protegendo a rota de autenticação,
+  criando pra ela uma Middleware: */
+  auth: 'App/Middleware/Auth',
+})
