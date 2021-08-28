@@ -1,6 +1,7 @@
 import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 /* Como um controller não acessa a dB, e sim o model, importamos ele aqui: */
 import Post from 'App/Models/Post'
+import PostValidator from 'App/Validators/PostValidator'
 
 export default class PostsController {
   public async index({}: HttpContextContract) {
@@ -23,9 +24,13 @@ export default class PostsController {
   public async store({ request }: HttpContextContract) {
     /* Pega da requisição enviada pelo Front End apenas
     o título e o conteúdo:*/
-    const data = request.only(['title', 'body'])
+    //const data = request.only(['title', 'body'])
     /* Msm coisa de fazer:
       const { title, body } = request.all()*/
+
+    /* Pega da requisição enviada pelo Front End apenas
+    o título e o conteúdo e valida com o validator:*/
+    const data = await request.validate(PostValidator)
 
     // Armazena na variável post os dados da requisição de envio:
     const post = await Post.create(data)
@@ -54,8 +59,12 @@ export default class PostsController {
   public async update({ request, params }: HttpContextContract) {
     /* Pega a postagem na dB pelo id: */
     const post = await Post.findOrFail(params.id)
-    /* Pega as novas informações da postagem pra atualizar */
-    const data = request.only(['title', 'body'])
+    /* Pega as novas informações da postagem pra atualizar 
+    const data = request.only(['title', 'body'])*/
+
+    /* Pega as novas informações da postagem pra atualizar 
+    e valida com o validator: */
+    const data = await request.validate(PostValidator)
 
     //Mescla/merge a postagem com os novos dados:
     post.merge(data)
