@@ -39,7 +39,8 @@ Server.middleware.register([() => import('@ioc:Adonis/Core/BodyParser')])
 |
 */
 Server.middleware.registerNamed({
-  /* Protegendo a rota de autenticação,
-  criando pra ela uma Middleware: */
+  /* Protegendo as rotas, criando pra elas
+  uma Middleware: */
   auth: 'App/Middleware/Auth',
+  acl: 'App/Middleware/Acl',
 })
