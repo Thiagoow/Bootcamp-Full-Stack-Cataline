@@ -21,7 +21,7 @@ export default class PostsController {
     return posts
   }
 
-  public async store({ request }: HttpContextContract) {
+  public async store({ request, auth }: HttpContextContract) {
     /* Pega da requisição enviada pelo Front End apenas
     o título e o conteúdo:*/
     //const data = request.only(['title', 'body'])
@@ -31,9 +31,16 @@ export default class PostsController {
     /* Pega da requisição enviada pelo Front End apenas
     o título e o conteúdo e valida com o validator:*/
     const data = await request.validate(PostValidator)
+    /* Autentica qual usuário fez esse posto a ser armazenado
+    na dB: */
+    const user = await auth.authenticate()
 
-    // Armazena na variável post os dados da requisição de envio:
-    const post = await Post.create(data)
+    /* Armazena na variável post o envio do user X + 
+    os dados da requisição de postagem que ele fez: */
+    const post = await Post.create({ authorId: user.id, ...data })
+
+    // Carrega para a postagem os dados do usuário:
+    await post.load('author')
 
     //Retorna a postagem criada:
     return post
