@@ -17,11 +17,13 @@ export default class CreateUsersSeeder extends BaseSeeder {
       /* Cria os dois tipos de usuários -> admin, e normal
       respectivamente: */
       {
+        name: 'Lester',
         email: 'adminUser@email.com',
         password: 'secretAdminPass:p',
         role: 'admin',
       },
       {
+        name: 'Beluga',
         email: 'normalUser@email.com',
         password: 'secret123',
         role: 'normal',

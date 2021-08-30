@@ -16,6 +16,27 @@ export default class Posts extends BaseSchema {
       table.string('title').notNullable()
       //text -> String maior:
       table.text('content', 'longtext').notNullable()
+      /* unsigned() = Sem limite de caracteres (toda coluna increments
+      possui um desses automaticamente);
+      references('X') = Referencia a coluna X
+      inTable('Y') = Na tabela Y
+
+      onUpdate()/onDelete() = 'CASCADE' | 'RESTRICT' | 'DELETE':
+        'DELETE' -> Se a coluna id da tabela 'users' for deletada/o
+        user que fez a publicação for deletado/atualizado, deleta essa
+        publicação feita por ele;
+        'CASCADE' -> Faz com a postagem a mesma coisa que foi feita
+        com a coluna id da tabela 'users': atualiza, ou deleta;
+        'RESTRICT' Não deixa deletar nem atualizar o id na tabela 'users'
+        se existir uma publicação feita por ele.
+      */
+      table
+        .integer('author_id')
+        .unsigned()
+        .references('id')
+        .inTable('users')
+        .onUpdate('CASCADE')
+        .onDelete('CASCADE')
       table.timestamps(true) /*Cria um 'created_at' e um 'updated_at' os 
       quais são atualizados automaticamente */
     })
