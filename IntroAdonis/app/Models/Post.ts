@@ -1,6 +1,10 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column, belongsTo, BelongsTo } from '@ioc:Adonis/Lucid/Orm'
 import User from 'App/Models/User'
+/* O que vai ocultar as datas de 3
+criação/atualização do user nas requisições 
+do tipo get: */
+import { CherryPick } from '@ioc:Adonis/Lucid/Orm'
 
 export default class Post extends BaseModel {
   @column({ isPrimary: true })
@@ -41,4 +45,27 @@ export default class Post extends BaseModel {
     },
   })
   public updatedAt: DateTime
+
+  //Serializa os dados/informações:
+  public serialize(cherryPick?: CherryPick) {
+    return {
+      ...this.serializeAttributes(cherryPick?.fields, false),
+      ...this.serializeComputed(cherryPick?.fields),
+      // Oculta os relacionamentos que eu quiser:
+      ...this.serializeRelations(
+        {
+          author: {
+            // Quais campos serão omitidos da API:
+            fields: { omit: ['updated_at', 'created_at'] },
+
+            /* Que campos queremos exibir na API
+            sobre o autor das postagens: 
+              fields: ['id', 'email', 'name', 'role', 'remember_me_token'],
+            */
+          },
+        },
+        false
+      ),
+    }
+  }
 }

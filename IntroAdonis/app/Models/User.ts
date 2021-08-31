@@ -9,6 +9,19 @@ export default class User extends BaseModel {
   @column()
   public name: string
 
+  /* Coluna computada fictícia/não existente na dB,
+  servindo apenas para mostrar o primeiro nome do user,
+  e não o seu nome completo: 
+  @computed()
+  public get firstName() {
+    //Divide a string pelos espaços e pega o primeiro item dessa divisão:
+    return this.name.split(' ')[0]
+    //Quando estamos numa classe e vamos
+    //referenciar um objeto dessa própria classe
+    //utilizamos o "this.":
+  }
+  */
+
   @column()
   public email: string
 
@@ -27,8 +40,6 @@ export default class User extends BaseModel {
 
   @column.dateTime({
     autoCreate: true,
-    //Oculta essa informação nas requisições:
-    serializeAs: null,
     //Formatando data e hora para um formato mais legível:
     serialize: (value: DateTime) => {
       return value.toFormat('dd/MM/yyyy HH:mm:ss')
@@ -39,8 +50,6 @@ export default class User extends BaseModel {
   @column.dateTime({
     autoCreate: true,
     autoUpdate: true,
-    //Oculta essa informação nas requisições:
-    serializeAs: null,
     //Formatando data e hora para um formato mais legível:
     serialize: (value: DateTime) => {
       return value.toFormat('dd/MM/yyyy HH:mm:ss')
