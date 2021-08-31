@@ -14,16 +14,31 @@ export default class Post extends BaseModel {
   //Mas aqui prefiro chama-la de 'body':
   public body: string
 
-  @column()
+  /* Para a API que não exiba informação repetida 
+  do id do autor da postagem nas requisições: */
+  @column({ serializeAs: null }) //Oculta essa informação
   public authorId: number
 
   //Essa coluna, pertence ao modelo, no qual tem como chave estrangeira:
   @belongsTo(() => User, { foreignKey: 'authorId' })
   public author: BelongsTo<typeof User>
 
-  @column.dateTime({ autoCreate: true })
+  @column.dateTime({
+    autoCreate: true,
+    //Formatando data e hora para um formato mais legível:
+    serialize: (value: DateTime) => {
+      return value.toFormat('dd/MM/yyyy HH:mm:ss')
+    },
+  })
   public createdAt: DateTime
 
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  @column.dateTime({
+    autoCreate: true,
+    autoUpdate: true,
+    //Formatando data e hora para um formato mais legível:
+    serialize: (value: DateTime) => {
+      return value.toFormat('dd/MM/yyyy HH:mm:ss')
+    },
+  })
   public updatedAt: DateTime
 }

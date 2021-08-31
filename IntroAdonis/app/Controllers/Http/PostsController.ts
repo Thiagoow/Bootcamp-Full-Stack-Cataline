@@ -7,7 +7,7 @@ export default class PostsController {
   public async index({}: HttpContextContract) {
     /* Pega todos os posts da Db, mas com o await
     para que ele não retorne vazio: */
-    const posts = await Post.all()
+    const posts = await Post.query().preload('author')
     /* Usando o método all(), ele lista pra mim todos
     os posts em ordem de CRIAÇÃO. Do mais recente ao
     mais antigo. Para mudar isso, e listar por ordem

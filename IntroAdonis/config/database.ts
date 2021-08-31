@@ -44,9 +44,8 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
         database: Env.get('MYSQL_DB_NAME'),
       },
       healthCheck: false,
-			debug: false,
+      debug: false,
     },
-
   },
 
   /*
@@ -62,6 +61,11 @@ const databaseConfig: DatabaseConfig & { orm: Partial<OrmConfig> } = {
   |
   */
   orm: {
+    /* Para que as requisições retornem as 
+    colunas como respostas em sintaxe camelCase: */
+    getSerializeAsKey(_, key) {
+      return key
+    },
   },
 }
 

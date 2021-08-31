@@ -25,10 +25,27 @@ export default class User extends BaseModel {
   @column()
   public rememberMeToken?: string
 
-  @column.dateTime({ autoCreate: true })
+  @column.dateTime({
+    autoCreate: true,
+    //Oculta essa informação nas requisições:
+    serializeAs: null,
+    //Formatando data e hora para um formato mais legível:
+    serialize: (value: DateTime) => {
+      return value.toFormat('dd/MM/yyyy HH:mm:ss')
+    },
+  })
   public createdAt: DateTime
 
-  @column.dateTime({ autoCreate: true, autoUpdate: true })
+  @column.dateTime({
+    autoCreate: true,
+    autoUpdate: true,
+    //Oculta essa informação nas requisições:
+    serializeAs: null,
+    //Formatando data e hora para um formato mais legível:
+    serialize: (value: DateTime) => {
+      return value.toFormat('dd/MM/yyyy HH:mm:ss')
+    },
+  })
   public updatedAt: DateTime
 
   @beforeSave()
