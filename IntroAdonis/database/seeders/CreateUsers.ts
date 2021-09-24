@@ -1,3 +1,8 @@
+/* Para executar as seeders no Heroku (precisa da CLI do Heroku):
+heroku run node build/ace db:seed -i --app=nome-do-seu-app-no-heroku
+
+Onde o comando "-i" = Pra escolher qual seeder queremos executar. E não
+TODAS de uma vez. Se eu quiser TODAS DE UMA VEZ, basta retirar o "-i". */
 import BaseSeeder from '@ioc:Adonis/Lucid/Seeder'
 //Modelo o qual faz as manipulações do User na dB:
 import User from 'App/Models/User'
