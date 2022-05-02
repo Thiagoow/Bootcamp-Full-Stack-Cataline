@@ -1,6 +1,6 @@
 <template>
   <div class="centralizar" align="center">
-    <button @click="show = !show">Toogle</button>
+    <button @click="show = !show">Toggle</button>
     <!--Se eu quiser um nome de classe de transição customizada, basta pegar o nome 
     da classe(sem o ".v-" inicial + class), e atribuir a ela o novo nome em string:-->
     <transition
@@ -21,9 +21,9 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     return {
-      show: false,
+      show: false
     };
-  },
+  }
 });
 </script>
 
@@ -38,6 +38,7 @@ Saída:
     .v-leave-from (de onde está vindo)
     .v-leave-active (como vai acontecer)
     .v-leave-to (para onde está indo) */
+
 .taVindoDo,
 .taSaindoPro {
   opacity: 0;

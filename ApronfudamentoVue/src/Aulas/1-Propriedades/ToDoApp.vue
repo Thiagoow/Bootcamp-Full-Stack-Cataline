@@ -28,9 +28,10 @@ export default defineComponent({
     return {
       /*2º-Criamos a array de ToDo a partir
       da interface(também como array): */
-      ToDos: [] as ToDo[],
+      ToDos: [] as ToDo[]
     };
   },
+
   //Observa algum dado e realiza alguma ação:
   watch: {
     //8º-Verifica se algum dos ToDos não está concluído:
@@ -41,8 +42,9 @@ export default defineComponent({
       if (isFinished) {
         alert("Todas as suas tarefas foram CONCLUÍDAS❗ 🤩🥳");
       }
-    },
+    }
   },
+
   /*LifeCycle Hook "created": Faz algo quando o componente
   .vue é criado*/
   created() {
@@ -50,16 +52,18 @@ export default defineComponent({
     this.ToDos = [
       { text: "Estudar Typescript", done: true },
       { text: "Lavar os pratos", done: true },
-      { text: "Aprender Nuxt.js", done: false },
+      { text: "Aprender Nuxt.js", done: false }
     ];
   },
+
   //Retorna um dado com algum tipo de alteração ou filtragrem:
   computed: {
     //4º-Retorna apenas os ToDos concluídos:
     ToDosDone(): ToDo[] {
       return this.ToDos.filter((ToDo) => ToDo.done);
-    },
+    }
   },
+
   methods: {
     //6º: Marca todos os ToDos como done:
     DoneAllToDos() {
@@ -72,7 +76,7 @@ export default defineComponent({
       this.ToDos = this.ToDos.map(({ text }) => {
         return { text, done: false };
       });
-    },
-  },
+    }
+  }
 });
 </script>

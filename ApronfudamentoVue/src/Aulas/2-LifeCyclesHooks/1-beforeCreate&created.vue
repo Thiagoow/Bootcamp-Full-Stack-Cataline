@@ -9,7 +9,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     return {
-      message: "Hello World ツ",
+      message: "Hello World ツ"
     };
   },
   /*Acontece ANTES do inicialização e watch dos componentes- Não tem acesso a nada, não tem nada criado ainda.
@@ -23,6 +23,6 @@ export default defineComponent({
   Se quisermos manipular os componentes o mais cedo possível, usamos o created:*/
   created() {
     console.log(this.message);
-  },
+  }
 });
 </script>

@@ -19,9 +19,9 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     return {
-      company: "Pixar",
+      company: "Pixar"
     };
-  },
+  }
 });
 </script>
 

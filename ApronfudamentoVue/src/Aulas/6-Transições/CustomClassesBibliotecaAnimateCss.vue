@@ -1,6 +1,6 @@
 <template>
   <div class="centralizar" align="center">
-    <button @click="show = !show">Toogle</button>
+    <button @click="show = !show">Toggle</button>
     <!--Para usar a biblioteca Animate.css, não precisamos definir NADA numa tag <style>, apenas 
         instalamos ela no nosso projeto com o npm, importamos ela na tag script(2* passo) e renomeamos 
         as classes "enter-active" e "leave-active" para "animate__animated nomeClasseAnimação":-->
@@ -22,8 +22,8 @@ import "animate.css";
 export default defineComponent({
   data() {
     return {
-      show: false,
+      show: false
     };
-  },
+  }
 });
 </script>

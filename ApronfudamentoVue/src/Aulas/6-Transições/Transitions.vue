@@ -1,6 +1,6 @@
 <template>
   <div class="centralizar" align="center">
-    <button @click="show = !show">Toogle</button>
+    <button @click="show = !show">Toggle</button>
     <!--Para criar uma transição para uma ação, colocamos ela entre as tags de 
     "transition", e definimos no css, como será a transição:-->
     <transition name="fade">
@@ -15,9 +15,9 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     return {
-      show: false,
+      show: false
     };
-  },
+  }
 });
 </script>
 

@@ -11,7 +11,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     return {
-      count: 0,
+      count: 0
     };
   },
   /*Acontece ANTES da atualização de dados no componente - Tem acesso aos dados e DOM.
@@ -23,7 +23,7 @@ export default defineComponent({
   Se quisermos realizar um ação depois da atualização dos dados, usamos o updated:*/
   updated() {
     console.log("Dps update");
-  },
+  }
 });
 </script>
 

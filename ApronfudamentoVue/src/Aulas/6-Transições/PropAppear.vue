@@ -9,7 +9,7 @@
     >
       <!--A prop acima "appear" já vem com valor padrão "true",
       e usamos ela nesse exemplo, para mostrar a animação de transição
-      assim que carregada a página. Para mudar o valor desssa prop:
+      assim que carregada a página. Para mudar o valor dessa prop:
         :appear="false"
       (v-bind/(:))
       -->
@@ -25,9 +25,9 @@ import "animate.css";
 export default defineComponent({
   data() {
     return {
-      show: true,
+      show: true
     };
-  },
+  }
 });
 </script>
 

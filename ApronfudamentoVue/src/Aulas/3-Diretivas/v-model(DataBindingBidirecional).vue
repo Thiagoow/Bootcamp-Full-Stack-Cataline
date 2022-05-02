@@ -3,7 +3,7 @@
     <form>
       <!--Remove os espaçamentos no começo e final do conteúdo digitado com o ".trim":-->
       <input type="text" v-model.trim="name" placeholder="Nome" />
-      <!--Define o atriubto digitado como number com o ".number":
+      <!--Define o atributo digitado como number com o ".number":
       (do contrário, o conteúdo digitado fica como string)-->
       <input type="number" v-model.number="age" placeholder="Idade" />
 
@@ -54,15 +54,15 @@ export default defineComponent({
       message: "",
       newsletter: false,
       color: "",
-      fruit: "",
+      fruit: ""
     };
   },
   //Se quiséssemos enviar para um db os dados:
   methods: {
     send() {
       //axios.post("/cadastroURL", this.form);
-    },
-  },
+    }
+  }
 });
 </script>
 

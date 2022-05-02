@@ -10,12 +10,13 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 export default defineComponent({
   data() {
     return {
-      url: '<a href="http://loja.com/produto/12345">Lojinhoツ</a>',
+      url: '<a href="http://loja.com/produto/12345">Lojinho</a>'
     };
-  },
+  }
 });
 </script>
 

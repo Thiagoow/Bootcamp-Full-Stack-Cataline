@@ -14,8 +14,8 @@ import BotãoEstilizado from "@/components/ButtonStyled.vue";
 
 export default defineComponent({
   components: {
-    CSSButton: BotãoEstilizado,
-  },
+    CSSButton: BotãoEstilizado
+  }
 });
 </script>
 

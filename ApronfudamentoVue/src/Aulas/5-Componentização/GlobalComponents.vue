@@ -7,6 +7,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 /*Se ele estivesse importado localmente:
 import GlobalButtonStyled from "@/components/GlobalButtonStyled.vue";
 */

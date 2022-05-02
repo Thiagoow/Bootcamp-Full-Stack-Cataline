@@ -28,6 +28,7 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 import "animate.css";
 import Home from "@/components/html/Home.vue";
 import About from "@/components/html/Sobre.vue";
@@ -35,12 +36,13 @@ import Contact from "@/components/html/Contato.vue";
 
 export default defineComponent({
   components: { Home, About, Contact },
+
   data() {
     return {
       show: true,
-      paginaAtual: "Home",
+      paginaAtual: "Home"
     };
-  },
+  }
 });
 </script>
 

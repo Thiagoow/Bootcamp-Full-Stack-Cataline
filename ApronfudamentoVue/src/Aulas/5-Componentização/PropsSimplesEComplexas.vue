@@ -21,17 +21,19 @@
 import { defineComponent } from "vue";
 //BotãoEstilizado importado da pasta components:
 import PropsButtonStyled from "@/components/PropsButtonStyled.vue";
+
 export default defineComponent({
   components: {
-    PropsButtonStyled,
+    PropsButtonStyled
   },
+
   data() {
     return {
       user: {
-        nome: "Thiaguin",
-      },
+        nome: "Thiago"
+      }
     };
-  },
+  }
 });
 </script>
 

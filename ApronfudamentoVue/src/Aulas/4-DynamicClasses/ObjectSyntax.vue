@@ -8,16 +8,16 @@ por exemplo:-->
   </h1>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from "vue";
 
 export default defineComponent({
   data() {
     return {
       isActive: true,
-      hasError: true,
+      hasError: true
     };
-  },
+  }
 });
 </script>
 

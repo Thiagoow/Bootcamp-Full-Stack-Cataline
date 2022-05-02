@@ -10,30 +10,31 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 export default defineComponent({
   data() {
     return {
       product: {
         name: "Camisa",
         url: "http://loja.com/produto/12345",
-        stock: true,
-      },
+        stock: true
+      }
     };
   },
   computed: {
     productClass(): string {
-      return this.product.stock ? "instock" : "unstock";
-    },
-  },
+      return this.product.stock ? "inStock" : "unStock";
+    }
+  }
 });
 </script>
 
 <style scoped>
-.instock {
+.inStock {
   color: green;
 }
 
-.unstock {
+.unStock {
   color: red;
 }
 </style>

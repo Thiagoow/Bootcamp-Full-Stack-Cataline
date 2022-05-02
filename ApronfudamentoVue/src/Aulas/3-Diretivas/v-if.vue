@@ -17,7 +17,7 @@
     <h2 v-else-if="sex === 'F' || sex === 'f'">Your are a woman! 👩🚺</h2>
     <h2 v-else>
       You are a non binary person! 🏳️‍🌈
-      <h5 class="nonBinary">#lovewins</h5>
+      <h5 class="nonBinary">#loveWins</h5>
     </h2>
   </div>
 </template>
@@ -28,9 +28,9 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     return {
-      sex: "",
+      sex: ""
     };
-  },
+  }
 });
 </script>
 

@@ -12,7 +12,7 @@
         @leave-cancelled="leaveCancelled"
     -->
   <div class="centralizar" align="center">
-    <button @click="show = !show">Toogle</button>
+    <button @click="show = !show">Toggle</button>
 
     <transition
       enter-active-class="animate__animated animate__zoomInDown"
@@ -34,9 +34,10 @@ import "animate.css";
 export default defineComponent({
   data() {
     return {
-      show: false,
+      show: false
     };
   },
+
   methods: {
     /*2º- Descobrimos qual a tipagem do evento vendo
     o que o console.log nos retorna a partir dele.
@@ -49,8 +50,8 @@ export default defineComponent({
       //3º- tipamos o evento corretamente e construímos ele do jeito que quisermos (e a tipagem suportar):
       console.log(element);
       element.classList.add("test");
-    },
-  },
+    }
+  }
 });
 </script>
 

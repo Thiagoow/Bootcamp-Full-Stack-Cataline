@@ -17,9 +17,9 @@ export default defineComponent({
         { id: 1, name: "Camisa", stock: true },
         { id: 2, name: "Bota", stock: false },
         { id: 3, name: "Chapéu", stock: false },
-        { id: 4, name: "Cinto", stock: true },
-      ],
+        { id: 4, name: "Cinto", stock: true }
+      ]
     };
-  },
+  }
 });
 </script>

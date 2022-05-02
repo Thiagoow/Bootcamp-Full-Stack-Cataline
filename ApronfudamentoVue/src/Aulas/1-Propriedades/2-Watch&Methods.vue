@@ -10,12 +10,14 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+
 export default defineComponent({
   data() {
     return {
-      count: 0,
+      count: 0
     };
   },
+
   //Onde ficam nossas funções/métodos:
   methods: {
     increment() {
@@ -26,8 +28,9 @@ export default defineComponent({
     },
     reset() {
       this.count = 0;
-    },
+    }
   },
+
   /*watch - Observa algum do nosso projeto e executa alguma ação.
   Colocando dentro da watch o: nomeDado() { //Ação }*/
   watch: {
@@ -35,8 +38,8 @@ export default defineComponent({
       console.log("Valor antigo da var Count: " + oldValue);
       console.log("Novo valor da var Count: " + newValue);
       //Para ver esse código funcionando, abre o console do navegador
-    },
-  },
+    }
+  }
 });
 </script>
 

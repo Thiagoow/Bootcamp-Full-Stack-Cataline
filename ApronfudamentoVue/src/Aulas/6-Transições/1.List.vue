@@ -13,7 +13,7 @@
     1-Envolvemos os elementos em uma única div. Porém, desse jeito, todos os elementos dentro
     dela receberão em conjunto, a mesma animação;
 
-    2-Definimos a tag transition como "<tranision-group>", e usamos os elementos agrupados em
+    2-Definimos a tag transition como "<transition-group>", e usamos os elementos agrupados em
     uma lista. E adicionamos na tag style, a classe:
         .v-move {
             transition: all 0.5s;
@@ -41,7 +41,7 @@ import "animate.css";
 export default defineComponent({
   data() {
     return {
-      users: ["Thiago", "Lulee", "Millena", "Bella"],
+      users: ["Thiago", "Lulee", "Millena", "Bella"]
     };
   },
   methods: {
@@ -50,8 +50,8 @@ export default defineComponent({
     },
     filtroZA() {
       this.users.sort().reverse();
-    },
-  },
+    }
+  }
 });
 </script>
 

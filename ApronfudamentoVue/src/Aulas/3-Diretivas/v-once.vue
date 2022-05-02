@@ -15,8 +15,8 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     return {
-      stock: 1,
+      stock: 1
     };
-  },
+  }
 });
 </script>

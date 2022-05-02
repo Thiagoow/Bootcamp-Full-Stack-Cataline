@@ -13,8 +13,8 @@ import ButtonStyled from "@/components/ButtonStyled.vue";
 
 export default defineComponent({
   components: {
-    ButtonStyled,
-  },
+    ButtonStyled
+  }
 });
 </script>
 

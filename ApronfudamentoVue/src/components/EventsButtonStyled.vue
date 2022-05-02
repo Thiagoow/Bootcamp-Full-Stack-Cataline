@@ -30,7 +30,7 @@ export default defineComponent({
       //Com os tipos:
       type: [String, Number],
       //Se a prop é obrigatória:
-      required: true,
+      required: true
     },
     //Tal componente pode ter a propriedade:
     color: {
@@ -41,7 +41,7 @@ export default defineComponent({
       //Aceita apenas os valores que puxamos de: "color":
       validator: (value: color) => {
         return ["success", "danger", "primary"].includes(value);
-      },
+      }
     },
     //Tal componente pode ter a propriedade:
     user: {
@@ -50,9 +50,9 @@ export default defineComponent({
       //Se essa prop fosse do tipo array -> <NomeProp[]>,
 
       //Se a prop é obrigatória:
-      required: false,
-    },
-  },
+      required: false
+    }
+  }
 });
 </script>
 

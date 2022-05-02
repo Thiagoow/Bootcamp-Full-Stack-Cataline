@@ -6,7 +6,7 @@
       <input
         type="text"
         placeholder="Type E and check console :)"
-        @keyup.e="heasterEgg"
+        @keyup.e="easterEgg"
       />
     </form>
   </div>
@@ -19,10 +19,10 @@ export default defineComponent({
     something() {
       console.log("Foi executado uma vez, e não será executado mais :D");
     },
-    heasterEgg() {
-      console.warn("YOU FOND THE HEASTER EGG :D");
-    },
-  },
+    easterEgg() {
+      console.warn("YOU FOND THE EASTER EGG :D");
+    }
+  }
 });
 </script>
 

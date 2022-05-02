@@ -20,9 +20,9 @@ import { defineComponent } from "vue";
 export default defineComponent({
   data() {
     return {
-      response: "",
+      response: ""
     };
-  },
+  }
 });
 </script>
 

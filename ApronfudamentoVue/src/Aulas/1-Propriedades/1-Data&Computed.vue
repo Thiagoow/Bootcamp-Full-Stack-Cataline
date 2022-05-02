@@ -20,16 +20,17 @@ export default defineComponent({
       person: {
         name: "Thiago",
         surname: "Silva Lopes",
-        age: 18,
-      } as Person,
+        age: 18
+      } as Person
     };
   },
+
   //computed - retorna um dado com algum tipo de alteração ou filtragem:
   computed: {
     fullName(): string {
       return `${this.person.name} ${this.person.surname}`;
       //Nesse caso, a alteração é concatenar o nome e sobrenome com uma função :)
-    },
-  },
+    }
+  }
 });
 </script>

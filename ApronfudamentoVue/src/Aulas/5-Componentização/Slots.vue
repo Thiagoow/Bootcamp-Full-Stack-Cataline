@@ -22,8 +22,8 @@ import SlotsButtonStyled from "@/components/SlotsButtonStyled.vue";
 
 export default defineComponent({
   components: {
-    SlotsButtonStyled,
-  },
+    SlotsButtonStyled
+  }
 });
 </script>
 
@@ -41,7 +41,7 @@ export default defineComponent({
   align-items: center;
   justify-content: center;*/
 
-  /*Centrailizar horizontalmente, mas 
+  /*Centralizar horizontalmente, mas 
   NÃO na mesma linha -> grid layout:
   display: grid;
   place-items: center;*/

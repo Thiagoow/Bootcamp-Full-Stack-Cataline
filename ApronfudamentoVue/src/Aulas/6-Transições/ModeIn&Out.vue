@@ -30,9 +30,9 @@ import "animate.css";
 export default defineComponent({
   data() {
     return {
-      show: true,
+      show: true
     };
-  },
+  }
 });
 </script>
 
