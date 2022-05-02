@@ -7,13 +7,13 @@
 #### 1- Project setup (instalar a pasta node_modules):
 
 ```
-npm install
+yarn install
 ```
 
 #### 2- Rodar o servidor:
 
 ```
-npm run dev
+yarn dev
 ```
 
 ### Depois de executar esses dois comandos, os servidores estarão on-line, permitindo a interação completa com o projeto. Para isso, acesse o link:
