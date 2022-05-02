@@ -1,7 +1,6 @@
 <template>
-  <!--É nessa tag que ficam os códigos HTML local com Vue:-->
-
-  <div class="users">
+  <!--☝🏽 É nessa tag que ficam os códigos HTML local com Vue:-->
+  <main class="users">
     <div class="container">
       <section>
         <!--De criar usuário-->
@@ -10,12 +9,13 @@
           <!--Com o @(que é a msm coisa do v-on), enviamos os dados 
           preenchidos pelo form, utilizando a função/método createUser-->
           <input type="text" placeholder="Nome" v-model="form.email" />
-          <!--Esse v-model="" é uma 2wayDatabinding, ou seja:
+          <!--Esse v-model="" é uma 2wayDataBinding, ou seja:
           retorna oq já existe e envia o novo dado do form-->
           <input type="email" placeholder="E-mail" v-model="form.name" />
           <button type="submit">Adicionar</button>
         </form>
       </section>
+
       <section>
         <!--De lista de usuários-->
         <h5 class="title">Lista de usuários</h5>
@@ -26,6 +26,7 @@
             poderíamos listar do seguinte jeito:
               <li v-for="(user, index) in users" :key="index">
             -->
+
             <p>{{ user.name }}</p>
             <small>{{ user.email }}</small>
             <!--Botão de deletar User com @/v-on:"nomeFunção/método(user.id)"-->
@@ -34,11 +35,11 @@
         </ul>
       </section>
     </div>
-  </div>
+  </main>
 </template>
 
 <script lang="ts">
-//É nessa tag que ficam os códigos Js local com Vue:
+//☝🏽 É nessa tag que ficam os códigos Js local com Vue:
 
 import { defineComponent } from "vue";
 import axios from "../src/utils/axios";
@@ -102,8 +103,7 @@ export default defineComponent({
 </script>
 
 <style scoped>
-/*É nessa tag que ficam os códigos CSS local com Vue:*/
-
+/*☝🏽 É nessa tag que ficam os códigos CSS local com Vue:*/
 .container {
   margin: 4rem auto;
   max-width: 500px;
