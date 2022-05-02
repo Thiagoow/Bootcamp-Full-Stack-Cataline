@@ -1,13 +1,13 @@
-# backendnode
+# backEndNode
 
 ## Project setup (install node_modules):
 
 ```
-npm install
+yarn install
 ```
 
 ### Server run:
 
 ```
-npm run dev
+yarn dev
 ```
