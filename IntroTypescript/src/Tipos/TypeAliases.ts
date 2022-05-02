@@ -9,8 +9,8 @@ e definimos os apelidos:
 
 type Pet = "dog" | "cat" | "hamster" | "turtle";
 
-function showPet(pet: Pet) {
+function ShowPet(pet: Pet) {
   console.log(pet);
 }
 
-showPet("cat");
+ShowPet("cat");
