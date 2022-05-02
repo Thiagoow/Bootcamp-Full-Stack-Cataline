@@ -1,6 +1,6 @@
 # backEndNode
 
-## Project setup (install node_modules):
+### Project setup (install node_modules):
 
 ```
 yarn install
@@ -11,3 +11,7 @@ yarn install
 ```
 yarn dev
 ```
+
+### Check local data:
+
+http://localhost:3333/users
