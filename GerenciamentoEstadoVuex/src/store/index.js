@@ -5,14 +5,14 @@ export default createStore({
   state: {
     /*É tipo o method "data" do Vue, que guarda os
     estados da aplicação*/
-    ToDos: [],
+    ToDos: []
   },
   mutations: {
     /*É onde alteramos o estado, EXECUTANDO algo criado na "action",
     confirmamos e rastreamos as alterações de estado*/
     SET_TODOS(state, ToDos) {
       state.ToDos = ToDos;
-    },
+    }
     /*Colocamos o nome da mutation todo maiúsculo e separado por "_"
     para diferenciar das actions, no VueDevTools*/
   },
@@ -25,11 +25,11 @@ export default createStore({
         { id: 2, text: "Conceitos Vuex", done: true },
         { id: 3, text: "Atomic Design", done: false },
         { id: 4, text: "Começar com Nuxt", done: false },
-        { id: 5, text: "Back-end com Adonis", done: false },
+        { id: 5, text: "Back-end com Adonis", done: false }
       ];
       //Altera o estado pela mutation de estado:
       context.commit("SET_TODOS", ToDos);
-    },
+    }
   },
   getters: {
     /*É tipo o objeto "computed" do Vue. Onde nos fornece o estado de algo na aplicação.
@@ -41,6 +41,6 @@ export default createStore({
     irão servir apenas de leitura.*/
     $doneToDos(state) {
       return state.ToDos.filter((ToDo) => ToDo.done);
-    },
-  },
+    }
+  }
 });
