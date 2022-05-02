@@ -12,12 +12,12 @@ $ docker-compose up -d
 $ node ace migration:run
 
 # Instalar dependências:
-$ npm install
+$ yarn install
 
 # Rodar o servidor local que muda a cada alteração:
-$ npm run dev
+$ yarn dev
 
 # Buildar pra produção e executar o servidor:
-$ npm run build
-$ npm run start
+$ yarn build
+$ yarn start
 ```
