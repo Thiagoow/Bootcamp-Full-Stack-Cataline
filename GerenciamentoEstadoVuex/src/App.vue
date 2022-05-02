@@ -13,16 +13,16 @@ export default {
     $allToDos() {
       return this.$store.getters.$allToDos;
     },
-    /*Método que lista todos os ToDos concluídos:
+    /*Método que lista todos os ToDos concluídos:*/
     $doneToDos() {
       return this.$store.getters.$doneToDos;
-    },*/
+    }
   },
   created() {
     /*Com o life cycle hook de quando a aplicação for criada,
   executamos a action lá do index.js, de chamar todos os ToDos criados:*/
     this.$store.dispatch("listToDos");
     //Dispatch -> disparar. Nesse caso, a action.
-  },
+  }
 };
 </script>
