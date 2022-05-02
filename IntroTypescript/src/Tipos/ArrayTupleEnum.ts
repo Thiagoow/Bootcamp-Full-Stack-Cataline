@@ -4,7 +4,7 @@ e quais vão ser os seus tipos. Podendo haver vários tipos !=,
 e quantos eu quiser. Mas eu preciso saber o tamanho MÁXIMO da array;
 
 enum --> cria um conjunto de chaves e valores, como um objeto,
-se diferenciando por atribuírmos o valor dessas chaves com "=",
+se diferenciando por atribuirmos o valor dessas chaves com "=",
 e não "=" como atribuímos os valors um objeto.
 
 */
@@ -30,7 +30,7 @@ console.log(items1);
 //Temos um enum de paleta de cores:
 enum Colors {
   white = "#fff",
-  black = "#000",
+  black = "#000"
 }
 //Caso eu queira saber o hexadecimal de uma das cores:
 let white: Colors = Colors.white;

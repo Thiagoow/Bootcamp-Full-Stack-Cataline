@@ -12,7 +12,7 @@ interface Pessoa {
 
 const pessoa1: Pessoa = {
   name: "Thiago Silva",
-  age: 18,
+  age: 18
 };
 
 //Tentando mudar os valores dos atributos da pessoa1:
