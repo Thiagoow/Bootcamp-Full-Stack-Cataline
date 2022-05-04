@@ -21,17 +21,21 @@ usa esse não, não precisa 🤨:
 items = [1, 2, 3, 4];
 console.log(items);
 
-//2-------------- Definindo uma array com tuple:
+/*2-------------- Definindo uma array com tuple:
+Tuple é uma array a qual sabemos o tamanho dela (quantidade de itens que ela possue) */
+
 let items1: [number, string, boolean];
 items1 = [1, "Thiago", true];
 console.log(items1);
 
-//3---------------- Definindo uma array com enum:
-//Temos um enum de paleta de cores:
+/*3---------------- Definindo uma array com enum:
+Enum é um objeto, que tem seus atributos definidos com "=" ao invés de ":" */
+
 enum Colors {
+  //Temos um enum de paleta de cores:
   white = "#fff",
   black = "#000"
 }
-//Caso eu queira saber o hexadecimal de uma das cores:
+//Set var a partir de um atributo do enum:
 let white: Colors = Colors.white;
 console.log(white);
