@@ -1,2 +1,2 @@
-O arquivo "Users.ts" dessa pasta foi utilizado
-no ../Utilidades&Extras/PathMapping.ts
+O arquivo "Users.ts" dessa pasta é usado
+no "@/Utilidades&Extras/PathMapping.ts"

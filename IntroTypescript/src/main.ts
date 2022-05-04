@@ -1,7 +1,7 @@
 console.log("Hello World :D");
 
 //Tentando importar o arquivo .js:
-import { sum } from "./calculator.js";
+import { sum } from "./utils/calculator.js";
 /*
 Se deu certo, e não erro nesse arquivo,
 o "allowJs" do tsconfig.json,está descomentado 
@@ -45,7 +45,7 @@ console.log.
 
 //------Utilizado no ./Utilidades&Extras/Decorators.txt-----------
 //Importamos nosso decorator:
-import { setApiVersion } from "@/Utilidades&Extras/Decorators";
+import { setApiVersion } from "@/3- Utilidades&Extras/Decorators";
 
 //Para usar o decorador (não precisamos colocar ";"):
 @setApiVersion("A versão da api é: 1.0 🤩😎")

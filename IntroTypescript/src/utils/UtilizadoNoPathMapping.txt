@@ -1,2 +1,0 @@
-O arquivo "axios.ts" foi utilizado
-no ../Utilidades&Extras/PathMapping.ts
