@@ -1,5 +1,4 @@
 /*
-
 TypeAliases --> Tipo e apelido.
 
 Ao invés de colocar todos os animais como
