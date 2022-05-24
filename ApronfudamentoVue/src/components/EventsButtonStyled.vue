@@ -1,7 +1,7 @@
 <template>
   <!--Criando um evento customizado, usamos a sintaxe:
   "$emit('NomeEvento', 'Dados/MétodosQueExecutamNoEvento')"
-  --->
+  -->
   <button
     class="button-styled"
     @click="$emit('eventoCustom', 'StringDeEventoCustomExecutada🤩😎')"
