@@ -1,40 +1,20 @@
 import express, { json, request, response } from "express";
 /*Importa o microframework express,
 pra criarmos o mini servidor com Node.js,
-após ele ser instalado com os comandos:
-
-    npm i express
-    (instala o express)
-
-    npm i @types/express -D
-    (Usado para podermos usa-lo junto com o Ts)
+após ele ser instalado juntamente com suas 
+tipagens, usando o comando:
+    yarn add @types/express -D
 */
 import cors from "cors";
-/*
-Instalado com:
-  npm i cors
-E tipagens do Ts:
+/* E tipagens dessa lib:
   npm i @types/cors
 */
 import { v4 as uuid } from "uuid";
-/*Importamos aqui o UUID - Universal and Unique ID.
-  Sendo necessário instala-lo -ANTES!-, com os comandos:
-    npm i uuid
-  E o comando de types (pois estamos usando Ts):
+/* Tipagens dessa lib:
     npm i @types/uuid -D
-  */
+*/
 
 console.log("Hello World :)");
-/*Dando um console.log pra ver se o Ts
-foi instalado corretamente, após os comandos:
-    
-    npm i typescript ts-node-dev -D
-    (instala o Ts e o ts-node-dev 
-    como dev dependency)
-
-    npx tsc --init
-    (Cria o tsconfig.json)
-*/
 
 //------------------A partir daqui, pertence ao HTTPMethods.ts:
 
@@ -42,12 +22,14 @@ foi instalado corretamente, após os comandos:
 const app = express();
 //Define para o express que ele usará o arquivo json (Usado no ParamsTypes.ts):
 app.use(express.json());
+//Inicia essa API na porta local:
+const port = 3333;
 //Define com o cors que todas as aplicações poderão fazer requisições para esse backend:
 app.use(cors({ origin: "*" }));
 
 //A porta que vai ouvir meu app, com uma arrow function:
-app.listen("3333", () => {
-  console.log("Back-end was started :D 😎");
+app.listen(port, () => {
+  console.log(`Back End running on http://localhost:${port}`);
 });
 
 /*
